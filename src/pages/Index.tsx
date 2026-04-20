@@ -492,38 +492,19 @@ export default function Index() {
               </button>
             </div>
 
-            <div className="flex justify-center">
-              <div className="relative w-64">
-                <div className="w-full aspect-[9/19] rounded-[2.5rem] border-2 border-white/10 bg-rock-smoke relative overflow-hidden glow-red">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 gap-6">
-                    <div className="w-16 h-16 rounded-full bg-rock-red/20 border border-rock-red/40 flex items-center justify-center animate-float">
-                      <span className="text-3xl">🎵</span>
-                    </div>
-                    <div className="text-center">
-                      <p className="font-oswald text-xs tracking-widest uppercase text-rock-gold mb-2">Сейчас играет</p>
-                      <p className="font-cormorant text-base text-rock-light">Исцеление голосом</p>
-                      <p className="font-oswald text-[10px] text-rock-ash mt-1">Анна Артман</p>
-                    </div>
-                    <div className="w-full">
-                      <div className="w-full h-1 bg-white/10 rounded-full">
-                        <div className="w-2/3 h-full bg-gradient-to-r from-rock-red to-rock-gold rounded-full" />
-                      </div>
-                    </div>
-                    <WaveVisualizer />
-                    <div className="flex gap-8 text-rock-ash">
-                      <Icon name="SkipBack" size={18} />
-                      <div className="w-10 h-10 rounded-full bg-rock-red flex items-center justify-center">
-                        <Icon name="Pause" size={16} className="text-white" />
-                      </div>
-                      <Icon name="SkipForward" size={18} />
-                    </div>
-                  </div>
+            <div className="flex justify-center w-full">
+              <div className="relative w-full max-w-lg">
+                <div className="rounded-xl overflow-hidden border border-white/10 glow-red" style={{ height: "560px" }}>
+                  <iframe
+                    src="https://music-therapy-vocal-rehabilitation--preview.poehali.dev/"
+                    className="w-full h-full"
+                    style={{ border: "none" }}
+                    title="Приложение по музыкотерапии"
+                    allow="autoplay"
+                  />
                 </div>
-                <div className="absolute -right-8 top-1/4 space-y-2">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="w-1.5 h-1.5 rounded-full bg-rock-gold/40" />
-                  ))}
-                </div>
+                <div className="absolute -top-3 -right-3 w-6 h-6 border border-rock-gold/30" />
+                <div className="absolute -bottom-3 -left-3 w-4 h-4 border border-rock-red/30" />
               </div>
             </div>
           </div>
