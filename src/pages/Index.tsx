@@ -472,24 +472,7 @@ export default function Index() {
                 и раскрытия голосового потенциала.
               </p>
 
-              <div className="space-y-4 mb-10">
-                {[
-                  { icon: "🎧", text: "Аудиопрограммы на каждый день" },
-                  { icon: "🌊", text: "Работа со звуковыми частотами" },
-                  { icon: "🧘", text: "Голосовые медитации и мантры" },
-                  { icon: "📊", text: "Отслеживание прогресса голоса" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="font-cormorant text-rock-light text-lg">{item.text}</span>
-                  </div>
-                ))}
-              </div>
 
-              <button className="btn-rock flex items-center gap-2">
-                <Icon name="Smartphone" size={14} />
-                Скачать приложение
-              </button>
             </div>
 
             <div className="flex justify-center w-full">
