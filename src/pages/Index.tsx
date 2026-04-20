@@ -302,23 +302,14 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/041a8579-a0b5-4e51-adcc-ebf02ad0db91.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="aspect-[3/4] overflow-hidden rounded-sm mt-8">
-                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="aspect-[3/4] overflow-hidden rounded-sm -mt-8">
-                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/e724ccf6-f372-4bd9-bd87-4c6e98daa032.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="aspect-[3/4] overflow-hidden rounded-sm">
-                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ac3a18d7-3f26-480e-91c9-994648e15450.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
-                </div>
+            <div className="relative flex justify-center">
+              <div className="relative w-full max-w-sm" style={{ maskImage: "radial-gradient(ellipse 80% 90% at 50% 50%, black 40%, transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 80% 90% at 50% 50%, black 40%, transparent 100%)" }}>
+                <img
+                  src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG"
+                  alt="Анна Артман"
+                  className="w-full object-cover"
+                />
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 border border-rock-gold/20 pointer-events-none" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-rock-red/30 pointer-events-none" />
             </div>
           </div>
         </div>
