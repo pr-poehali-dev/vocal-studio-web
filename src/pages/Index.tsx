@@ -159,9 +159,15 @@ export default function Index() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex flex-col leading-none">
-            <span className="font-oswald text-xs tracking-[0.25em] text-rock-gold uppercase">Театр Рока</span>
-            <span className="font-cormorant text-xl font-light tracking-wide text-rock-light">Артман & Ко</span>
+          <a href="#" className="flex items-baseline gap-[2px] select-none">
+            <span
+              className="font-cormorant italic font-semibold text-rock-gold leading-none"
+              style={{ fontSize: "2rem", letterSpacing: "-0.02em" }}
+            >A</span>
+            <span
+              className="font-oswald font-light text-rock-light leading-none"
+              style={{ fontSize: "1.05rem", letterSpacing: "0.18em" }}
+            >.ARTMAN</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
