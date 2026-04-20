@@ -276,7 +276,7 @@ export default function Index() {
             alignItems: "flex-end",
           }}>
             <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG"
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ee3c604d-eaac-4e37-9e54-f7423658412c.JPG"
               alt="Анна Артман"
               className="w-full object-contain"
               style={{ maxHeight: "750px" }}
