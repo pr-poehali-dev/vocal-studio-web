@@ -264,19 +264,22 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative overflow-hidden" style={{ minHeight: "700px" }}>
+      <section id="about" className="relative overflow-hidden" style={{ minHeight: "800px" }}>
         {/* Фото на весь фон */}
-        <div className="absolute inset-0 flex justify-end items-end pointer-events-none">
+        <div className="absolute inset-0 flex justify-end items-stretch pointer-events-none">
           <div style={{
-            maskImage: "radial-gradient(ellipse 60% 90% at 80% 60%, black 30%, transparent 75%)",
-            WebkitMaskImage: "radial-gradient(ellipse 60% 90% at 80% 60%, black 30%, transparent 75%)",
-            height: "110%",
-            width: "55%",
+            maskImage: "linear-gradient(to left, black 40%, transparent 100%), linear-gradient(to top, transparent 0%, black 15%)",
+            WebkitMaskImage: "linear-gradient(to left, black 40%, transparent 100%)",
+            maskComposite: "intersect",
+            WebkitMaskComposite: "destination-in",
+            width: "60%",
+            position: "relative",
           }}>
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG"
               alt="Анна Артман"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-center"
+              style={{ objectPosition: "50% 10%" }}
             />
           </div>
         </div>
