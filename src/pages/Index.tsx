@@ -460,36 +460,30 @@ export default function Index() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-rock-red/5 blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="section-eyebrow mb-4">Приложение</p>
-              <h2 className="section-title mb-6">
-                Музыко-<br /><em>терапия</em>
-              </h2>
-              <p className="font-cormorant text-rock-ash text-lg leading-relaxed mb-8">
-                Авторское приложение по музыкотерапии — ваш личный звуковой терапевт.
-                Медитации, дыхательные практики, голосовые упражнения для снятия стресса
-                и раскрытия голосового потенциала.
-              </p>
+          <div className="text-center mb-10">
+            <p className="section-eyebrow mb-4">Приложение</p>
+            <h2 className="section-title mb-6">
+              Музыко-<em>терапия</em>
+            </h2>
+            <p className="font-cormorant text-rock-ash text-lg leading-relaxed max-w-2xl mx-auto">
+              Авторское приложение по музыкотерапии — ваш личный звуковой терапевт.
+              Медитации, дыхательные практики, голосовые упражнения для снятия стресса
+              и раскрытия голосового потенциала.
+            </p>
+          </div>
 
-
+          <div className="relative w-full">
+            <div className="rounded-xl overflow-hidden border border-white/10 glow-red" style={{ height: "700px" }}>
+              <iframe
+                src="https://music-therapy-vocal-rehabilitation--preview.poehali.dev/"
+                className="w-full h-full"
+                style={{ border: "none" }}
+                title="Приложение по музыкотерапии"
+                allow="autoplay"
+              />
             </div>
-
-            <div className="flex justify-center w-full">
-              <div className="relative w-full max-w-lg">
-                <div className="rounded-xl overflow-hidden border border-white/10 glow-red" style={{ height: "560px" }}>
-                  <iframe
-                    src="https://music-therapy-vocal-rehabilitation--preview.poehali.dev/"
-                    className="w-full h-full"
-                    style={{ border: "none" }}
-                    title="Приложение по музыкотерапии"
-                    allow="autoplay"
-                  />
-                </div>
-                <div className="absolute -top-3 -right-3 w-6 h-6 border border-rock-gold/30" />
-                <div className="absolute -bottom-3 -left-3 w-4 h-4 border border-rock-red/30" />
-              </div>
-            </div>
+            <div className="absolute -top-3 -right-3 w-6 h-6 border border-rock-gold/30" />
+            <div className="absolute -bottom-3 -left-3 w-4 h-4 border border-rock-red/30" />
           </div>
         </div>
       </section>
