@@ -303,22 +303,22 @@ export default function Index() {
             </div>
 
             <div className="relative">
-              <div className="aspect-[3/4] relative overflow-hidden">
-                <img
-                  src={HERO_IMAGE}
-                  alt="Анна Артман"
-                  className="w-full h-full object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-rock-black/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="card-rock p-4">
-                    <p className="font-caveat text-lg text-rock-gold">"Я помогу найти звук, который уже живёт внутри тебя"</p>
-                    <p className="font-oswald text-xs tracking-widest uppercase text-rock-ash mt-2">— Анна Артман</p>
-                  </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="aspect-[3/4] overflow-hidden rounded-sm">
+                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/041a8579-a0b5-4e51-adcc-ebf02ad0db91.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="aspect-[3/4] overflow-hidden rounded-sm mt-8">
+                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="aspect-[3/4] overflow-hidden rounded-sm -mt-8">
+                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/e724ccf6-f372-4bd9-bd87-4c6e98daa032.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="aspect-[3/4] overflow-hidden rounded-sm">
+                  <img src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ac3a18d7-3f26-480e-91c9-994648e15450.JPG" alt="Анна Артман" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" />
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 border border-rock-gold/20" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-rock-red/30" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 border border-rock-gold/20 pointer-events-none" />
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 border border-rock-red/30 pointer-events-none" />
             </div>
           </div>
         </div>
