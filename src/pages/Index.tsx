@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/dac673f5-694e-4cec-8c2d-c5da53e7f95e.jpg";
 
 const NAV_ITEMS = [
-  { label: "О студии", href: "#about" },
+  { label: "О педагоге", href: "#about" },
   { label: "Направления", href: "#directions" },
   { label: "Курсы", href: "#courses" },
   { label: "Видеотека", href: "#videos" },
@@ -220,7 +220,7 @@ export default function Index() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
           <div className="max-w-3xl">
-            <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт · Студия «Театр Рока»</p>
+            <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт · «Театр Рока Артман & Ко»</p>
 
             <h1 className="font-cormorant font-light leading-[0.95] mb-6 animate-fade-in scroll-delay-1"
               style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)" }}>
@@ -264,13 +264,13 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="section-eyebrow mb-4">О студии и педагоге</p>
+              <p className="section-eyebrow mb-4">О педагоге</p>
               <h2 className="section-title mb-8 line-gold">
                 Голос — это<br /><em>не дар, а навык</em>
               </h2>
               <div className="space-y-5 text-rock-ash font-cormorant text-lg leading-relaxed">
                 <p>
-                  Студия «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
+                  «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
                   рок-духом. Работаю на стыке педагогики, фонопедии и музыкальной психотерапии.
                 </p>
                 <p>
@@ -393,7 +393,7 @@ export default function Index() {
             <p className="section-eyebrow mb-4">Обучающий контент</p>
             <h2 className="section-title">Библиотека <em>видеоуроков</em></h2>
             <p className="font-cormorant text-rock-ash text-lg mt-4 max-w-xl">
-              Бесплатные уроки — в открытом доступе. Закрытые — для учеников студии.
+              Бесплатные уроки — в открытом доступе. Закрытые — для учеников.
             </p>
           </div>
 
@@ -579,7 +579,7 @@ export default function Index() {
               <div className="text-5xl mb-6">🎵</div>
               <h3 className="font-cormorant text-2xl text-rock-gold mb-3">Заявка отправлена!</h3>
               <p className="font-cormorant text-rock-ash text-lg">
-                Анна свяжется с вами в течение 24 часов. До встречи в студии!
+                Анна свяжется с вами в течение 24 часов. До встречи!
               </p>
             </div>
           ) : (
@@ -690,10 +690,10 @@ export default function Index() {
             </div>
 
             <div className="md:col-span-2 card-rock p-8">
-              <p className="font-oswald text-xs tracking-[0.3em] uppercase text-rock-gold mb-5">О студии</p>
+              <p className="font-oswald text-xs tracking-[0.3em] uppercase text-rock-gold mb-5">О педагоге</p>
               <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6">
-                «Театр Рока Артман & Ко» — онлайн и офлайн занятия. Студия в Москве,
-                принимаем учеников со всей России и из-за рубежа в онлайн-формате.
+                «Театр Рока Артман & Ко» — онлайн и офлайн занятия. Москва,
+                принимаю учеников со всей России и из-за рубежа в онлайн-формате.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
