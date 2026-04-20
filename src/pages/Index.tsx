@@ -290,7 +290,7 @@ export default function Index() {
 
               <div className="grid grid-cols-3 gap-6 mt-10">
                 {[
-                  { num: "12+", label: "лет практики" },
+                  { num: "20+", label: "лет практики" },
                   { num: "500+", label: "учеников" },
                   { num: "6", label: "направлений" },
                 ].map((stat) => (
