@@ -270,15 +270,16 @@ export default function Index() {
           <div style={{
             maskImage: "linear-gradient(to left, black 50%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to left, black 50%, transparent 100%)",
-            width: "48%",
+            width: "45%",
             position: "relative",
-            marginRight: "-4%",
+            display: "flex",
+            alignItems: "flex-end",
           }}>
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG"
               alt="Анна Артман"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: "60% 10%" }}
+              className="w-full object-contain"
+              style={{ maxHeight: "750px" }}
             />
           </div>
         </div>
