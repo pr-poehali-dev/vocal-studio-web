@@ -720,9 +720,13 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-8 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col items-center md:items-start">
-            <span className="font-oswald text-xs tracking-[0.25em] uppercase text-rock-gold">Театр Рока Артман & Ко</span>
-            <span className="font-cormorant text-rock-ash text-sm mt-1">© 2024 Анна Артман. Все права защищены.</span>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/9d285d0c-e6e0-470b-a30f-8c3e9ca357df.jpg"
+              alt="Artman"
+              className="h-8 w-auto object-contain opacity-80"
+            />
+            <span className="font-cormorant text-rock-ash text-sm">© 2024 Анна Артман. Все права защищены.</span>
           </div>
           <div className="flex items-center gap-3 opacity-30">
             <SoundWaveSVG />
