@@ -163,8 +163,8 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/9d285d0c-e6e0-470b-a30f-8c3e9ca357df.jpg"
               alt="Artman"
-              className="h-10 w-auto object-contain"
-              style={{ filter: "brightness(1.1)" }}
+              className="h-20 w-auto object-contain"
+              style={{ filter: "brightness(1.15)" }}
             />
           </a>
 
