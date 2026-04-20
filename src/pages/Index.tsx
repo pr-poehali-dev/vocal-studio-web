@@ -264,52 +264,56 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-28 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="section-eyebrow mb-4">О педагоге</p>
-              <h2 className="section-title mb-8 line-gold">
-                Голос — это<br /><em>не дар, а навык</em>
-              </h2>
-              <div className="space-y-5 text-rock-ash font-cormorant text-lg leading-relaxed">
-                <p>
-                  «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
-                  рок-духом. Работаю на стыке педагогики, фонопедии и музыкальной психотерапии.
-                </p>
-                <p>
-                  Моя авторская методика <span className="text-rock-gold italic">«Чем он это сделал»</span> —
-                  разбор вокальных техник рок-легенд с научной точки зрения. Изучаем, как работает
-                  голосовой аппарат Роберта Планта, Честера Беннингтона, Бьорк — и повторяем это безопасно.
-                </p>
-                <p>
-                  За 12+ лет практики помогла сотням вокалистов найти свой звук — от новичков,
-                  которые боялись петь, до профессионалов на большой сцене.
-                </p>
-              </div>
+      <section id="about" className="relative overflow-hidden" style={{ minHeight: "700px" }}>
+        {/* Фото на весь фон */}
+        <div className="absolute inset-0 flex justify-end items-end pointer-events-none">
+          <div style={{
+            maskImage: "radial-gradient(ellipse 60% 90% at 80% 60%, black 30%, transparent 75%)",
+            WebkitMaskImage: "radial-gradient(ellipse 60% 90% at 80% 60%, black 30%, transparent 75%)",
+            height: "110%",
+            width: "55%",
+          }}>
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG"
+              alt="Анна Артман"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+        </div>
 
-              <div className="grid grid-cols-3 gap-6 mt-10">
-                {[
-                  { num: "20+", label: "лет практики" },
-                  { num: "500+", label: "учеников" },
-                  { num: "6", label: "направлений" },
-                ].map((stat) => (
-                  <div key={stat.label} className="border-t border-rock-red/30 pt-4">
-                    <div className="font-cormorant text-3xl font-semibold text-gradient-gold">{stat.num}</div>
-                    <div className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-1">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+        <div className="max-w-7xl mx-auto px-6 py-28 relative z-10">
+          <div className="max-w-lg">
+            <p className="section-eyebrow mb-4">О педагоге</p>
+            <h2 className="section-title mb-8 line-gold">
+              Голос — это<br /><em>не дар, а навык</em>
+            </h2>
+            <div className="space-y-5 text-rock-ash font-cormorant text-lg leading-relaxed">
+              <p>
+                «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
+                рок-духом. Работаю на стыке педагогики, фонопедии и музыкальной психотерапии.
+              </p>
+              <p>
+                Моя авторская методика <span className="text-rock-gold italic">«Чем он это сделал»</span> —
+                разбор вокальных техник рок-легенд с научной точки зрения. Изучаем, как работает
+                голосовой аппарат Роберта Планта, Честера Беннингтона, Бьорк — и повторяем это безопасно.
+              </p>
+              <p>
+                За 20+ лет практики помогла сотням вокалистов найти свой звук — от новичков,
+                которые боялись петь, до профессионалов на большой сцене.
+              </p>
             </div>
 
-            <div className="relative flex justify-center">
-              <div className="relative w-full max-w-sm" style={{ maskImage: "radial-gradient(ellipse 80% 90% at 50% 50%, black 40%, transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 80% 90% at 50% 50%, black 40%, transparent 100%)" }}>
-                <img
-                  src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d9be78a6-ec44-4034-8503-5b2517f4fd15.JPG"
-                  alt="Анна Артман"
-                  className="w-full object-cover"
-                />
-              </div>
+            <div className="grid grid-cols-3 gap-6 mt-10">
+              {[
+                { num: "20+", label: "лет практики" },
+                { num: "500+", label: "учеников" },
+                { num: "6", label: "направлений" },
+              ].map((stat) => (
+                <div key={stat.label} className="border-t border-rock-red/30 pt-4">
+                  <div className="font-cormorant text-3xl font-semibold text-gradient-gold">{stat.num}</div>
+                  <div className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-1">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
