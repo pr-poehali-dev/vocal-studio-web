@@ -159,15 +159,13 @@ export default function Index() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-baseline gap-[2px] select-none">
-            <span
-              className="font-cormorant italic font-semibold text-rock-gold leading-none"
-              style={{ fontSize: "2rem", letterSpacing: "-0.02em" }}
-            >A</span>
-            <span
-              className="font-oswald font-light text-rock-light leading-none"
-              style={{ fontSize: "1.05rem", letterSpacing: "0.18em" }}
-            >.ARTMAN</span>
+          <a href="#" className="flex items-center select-none">
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/9d285d0c-e6e0-470b-a30f-8c3e9ca357df.jpg"
+              alt="Artman"
+              className="h-10 w-auto object-contain"
+              style={{ filter: "brightness(1.1)" }}
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
