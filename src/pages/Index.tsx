@@ -265,59 +265,57 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative overflow-hidden" style={{ minHeight: "1500px" }}>
-        {/* Фото на весь фон */}
-        <div className="absolute inset-0 flex justify-end items-stretch pointer-events-none">
-          <div style={{
-            maskImage: "radial-gradient(ellipse 80% 85% at 60% 50%, black 40%, transparent 100%)",
-            WebkitMaskImage: "radial-gradient(ellipse 80% 85% at 60% 50%, black 40%, transparent 100%)",
-            width: "50%",
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ec1ebb80-e4de-4424-843b-9d1470e550be.png"
-              alt="Анна Артман"
-              className="w-full object-contain glow-lilac"
-              style={{ maxHeight: "1500px" }}
-            />
-          </div>
-        </div>
+      <section id="about" className="relative overflow-hidden py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Текст */}
+            <div>
+              <p className="section-eyebrow mb-4">О педагоге</p>
+              <h2 className="section-title mb-8 line-gold glow-lilac-text">
+                Голос — это<br /><em>не дар, а навык</em>
+              </h2>
+              <div className="space-y-5 text-rock-light font-cormorant text-xl leading-relaxed" style={{ opacity: 0.88 }}>
+                <p>
+                  «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
+                  рок-духом. Работаю на стыке педагогики, фонопедии и музыкальной психотерапии.
+                </p>
+                <p>
+                  Моя авторская методика <span className="text-rock-gold italic">«Чем он это сделал»</span> —
+                  разбор вокальных техник рок-легенд с научной точки зрения. Изучаем, как работает
+                  голосовой аппарат Роберта Планта, Честера Беннингтона, Бьорк — и повторяем это безопасно.
+                </p>
+                <p>
+                  За 20+ лет практики помогла сотням вокалистов найти свой звук — от новичков,
+                  которые боялись петь, до профессионалов на большой сцене.
+                </p>
+              </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-28 relative z-10">
-          <div className="max-w-lg">
-            <p className="section-eyebrow mb-4">О педагоге</p>
-            <h2 className="section-title mb-8 line-gold glow-lilac-text">
-              Голос — это<br /><em>не дар, а навык</em>
-            </h2>
-            <div className="space-y-5 text-rock-light font-cormorant text-xl leading-relaxed" style={{ opacity: 0.88 }}>
-              <p>
-                «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
-                рок-духом. Работаю на стыке педагогики, фонопедии и музыкальной психотерапии.
-              </p>
-              <p>
-                Моя авторская методика <span className="text-rock-gold italic">«Чем он это сделал»</span> —
-                разбор вокальных техник рок-легенд с научной точки зрения. Изучаем, как работает
-                голосовой аппарат Роберта Планта, Честера Беннингтона, Бьорк — и повторяем это безопасно.
-              </p>
-              <p>
-                За 20+ лет практики помогла сотням вокалистов найти свой звук — от новичков,
-                которые боялись петь, до профессионалов на большой сцене.
-              </p>
+              <div className="grid grid-cols-3 gap-6 mt-10">
+                {[
+                  { num: "20+", label: "лет практики" },
+                  { num: "500+", label: "учеников" },
+                  { num: "6", label: "направлений" },
+                ].map((stat) => (
+                  <div key={stat.label} className="border-t border-rock-red/30 pt-4">
+                    <div className="font-cormorant text-3xl font-semibold text-gradient-gold">{stat.num}</div>
+                    <div className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-1">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 mt-10">
-              {[
-                { num: "20+", label: "лет практики" },
-                { num: "500+", label: "учеников" },
-                { num: "6", label: "направлений" },
-              ].map((stat) => (
-                <div key={stat.label} className="border-t border-rock-red/30 pt-4">
-                  <div className="font-cormorant text-3xl font-semibold text-gradient-gold">{stat.num}</div>
-                  <div className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-1">{stat.label}</div>
-                </div>
-              ))}
+            {/* Картинка */}
+            <div className="flex justify-center items-center">
+              <img
+                src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ec1ebb80-e4de-4424-843b-9d1470e550be.png"
+                alt="Rock & Extreme Vocal Coach"
+                className="w-full object-contain glow-lilac"
+                style={{
+                  maxHeight: "750px",
+                  maskImage: "radial-gradient(ellipse 75% 80% at 50% 50%, black 45%, transparent 100%)",
+                  WebkitMaskImage: "radial-gradient(ellipse 75% 80% at 50% 50%, black 45%, transparent 100%)",
+                }}
+              />
             </div>
           </div>
         </div>
