@@ -161,7 +161,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#" className="flex items-center select-none">
             <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/9d285d0c-e6e0-470b-a30f-8c3e9ca357df.jpg"
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/766c35a9-598b-447d-8ef7-d7847646fb48.png"
               alt="Artman"
               className="h-28 w-auto object-contain"
               style={{ filter: "brightness(1.2)", mixBlendMode: "screen" }}
@@ -677,7 +677,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/9d285d0c-e6e0-470b-a30f-8c3e9ca357df.jpg"
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/766c35a9-598b-447d-8ef7-d7847646fb48.png"
               alt="Artman"
               className="h-8 w-auto object-contain opacity-80"
             />
