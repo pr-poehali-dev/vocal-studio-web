@@ -280,7 +280,7 @@ export default function Index() {
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ec1ebb80-e4de-4424-843b-9d1470e550be.png"
               alt="Анна Артман"
               className="w-full object-contain glow-lilac"
-              style={{ maxHeight: "750px" }}
+              style={{ maxHeight: "1500px" }}
             />
           </div>
         </div>
