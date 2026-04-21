@@ -265,7 +265,7 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="relative overflow-hidden" style={{ minHeight: "800px" }}>
+      <section id="about" className="relative overflow-hidden" style={{ minHeight: "1500px" }}>
         {/* Фото на весь фон */}
         <div className="absolute inset-0 flex justify-end items-stretch pointer-events-none">
           <div style={{
