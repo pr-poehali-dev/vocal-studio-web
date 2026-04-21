@@ -305,15 +305,15 @@ export default function Index() {
             </div>
 
             {/* Картинка */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center" style={{ margin: "-4rem -2rem" }}>
               <img
                 src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ec1ebb80-e4de-4424-843b-9d1470e550be.png"
                 alt="Rock & Extreme Vocal Coach"
                 className="w-full object-contain glow-lilac"
                 style={{
-                  maxHeight: "750px",
-                  maskImage: "radial-gradient(ellipse 75% 80% at 50% 50%, black 45%, transparent 100%)",
-                  WebkitMaskImage: "radial-gradient(ellipse 75% 80% at 50% 50%, black 45%, transparent 100%)",
+                  maxWidth: "120%",
+                  maskImage: "radial-gradient(ellipse 80% 82% at 50% 50%, black 45%, transparent 100%)",
+                  WebkitMaskImage: "radial-gradient(ellipse 80% 82% at 50% 50%, black 45%, transparent 100%)",
                 }}
               />
             </div>
