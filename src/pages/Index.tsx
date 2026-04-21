@@ -226,7 +226,7 @@ export default function Index() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
           <div className="max-w-3xl">
-            <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт · «Театр Рока Артман & Ко»</p>
+            <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт вокального коуча Анны Артман</p>
 
             <h1 className="font-cormorant font-light leading-[0.95] mb-6 animate-fade-in scroll-delay-1 glow-lilac-text"
               style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)" }}>
