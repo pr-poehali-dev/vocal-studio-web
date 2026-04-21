@@ -221,12 +221,14 @@ export default function Index() {
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
         <div className="absolute left-0 top-1/3 w-32 h-px bg-gradient-to-r from-transparent to-rock-gold/50" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(123,79,191,0.18) 0%, transparent 70%)", filter: "blur(40px)" }} />
+        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(100,50,180,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
           <div className="max-w-3xl">
             <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт · «Театр Рока Артман & Ко»</p>
 
-            <h1 className="font-cormorant font-light leading-[0.95] mb-6 animate-fade-in scroll-delay-1"
+            <h1 className="font-cormorant font-light leading-[0.95] mb-6 animate-fade-in scroll-delay-1 glow-lilac-text"
               style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)" }}>
               <span className="block text-rock-light">Анна</span>
               <span className="block text-gradient-red font-semibold italic">Артман</span>
@@ -278,7 +280,7 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ee3c604d-eaac-4e37-9e54-f7423658412c.JPG"
               alt="Анна Артман"
-              className="w-full object-contain"
+              className="w-full object-contain glow-lilac"
               style={{ maxHeight: "750px" }}
             />
           </div>
@@ -287,7 +289,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 py-28 relative z-10">
           <div className="max-w-lg">
             <p className="section-eyebrow mb-4">О педагоге</p>
-            <h2 className="section-title mb-8 line-gold">
+            <h2 className="section-title mb-8 line-gold glow-lilac-text">
               Голос — это<br /><em>не дар, а навык</em>
             </h2>
             <div className="space-y-5 text-rock-light font-cormorant text-xl leading-relaxed" style={{ opacity: 0.88 }}>
