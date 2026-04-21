@@ -230,7 +230,7 @@ export default function Index() {
 
             <h1 className="font-cormorant font-semibold italic leading-[0.95] mb-6 animate-fade-in scroll-delay-1 glow-lilac-text text-gradient-red"
               style={{ fontSize: "clamp(4.5rem, 12vw, 10rem)" }}>
-              Анну Артман
+              Анны Артман
             </h1>
 
             <div className="flex flex-wrap gap-3 mb-8 animate-fade-in scroll-delay-2">
