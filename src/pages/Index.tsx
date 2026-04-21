@@ -150,12 +150,12 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-rock-black overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#1a0f2e" }}>
 
       {/* NAV */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "bg-black/90 backdrop-blur-md border-b border-white/5" : "bg-transparent"
+          scrolled ? "backdrop-blur-md border-b border-white/10" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -189,7 +189,7 @@ export default function Index() {
         </div>
 
         {menuOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/5 px-6 py-6 flex flex-col gap-5">
+          <div className="md:hidden backdrop-blur-md border-t border-white/10 px-6 py-6 flex flex-col gap-5" style={{ backgroundColor: "rgba(26,15,46,0.97)" }}>
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
@@ -215,8 +215,8 @@ export default function Index() {
             alt="Анна Артман"
             className="w-full h-full object-cover object-top opacity-35"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-rock-black via-rock-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-rock-black via-transparent to-transparent" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #1a0f2e 40%, rgba(26,15,46,0.75) 70%, transparent 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #1a0f2e 0%, transparent 50%)" }} />
         </div>
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
@@ -240,7 +240,7 @@ export default function Index() {
               ))}
             </div>
 
-            <p className="font-cormorant text-xl text-rock-ash leading-relaxed mb-10 max-w-xl animate-fade-in scroll-delay-3">
+            <p className="font-cormorant text-2xl text-rock-light leading-relaxed mb-10 max-w-xl animate-fade-in scroll-delay-3" style={{ opacity: 0.85 }}>
               Автор методики{" "}
               <em className="text-rock-gold">"Чем он это сделал"</em>.{" "}
               Основатель студии <em className="text-rock-light">«Театр Рока Артман & Ко»</em>.
@@ -290,7 +290,7 @@ export default function Index() {
             <h2 className="section-title mb-8 line-gold">
               Голос — это<br /><em>не дар, а навык</em>
             </h2>
-            <div className="space-y-5 text-rock-ash font-cormorant text-lg leading-relaxed">
+            <div className="space-y-5 text-rock-light font-cormorant text-xl leading-relaxed" style={{ opacity: 0.88 }}>
               <p>
                 «Театр Рока Артман & Ко» — место, где академическая строгость встречается с
                 рок-духом. Работаю на стыке педагогики, фонопедии и музыкальной психотерапии.
@@ -342,7 +342,7 @@ export default function Index() {
                 <h3 className="font-oswald text-lg tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors">
                   {dir.title}
                 </h3>
-                <p className="font-cormorant text-rock-ash text-base leading-relaxed">{dir.desc}</p>
+                <p className="font-cormorant text-rock-light text-lg leading-relaxed" style={{ opacity: 0.8 }}>{dir.desc}</p>
                 <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
               </div>
             ))}
@@ -353,7 +353,7 @@ export default function Index() {
       <div className="divider-rock" />
 
       {/* COURSES */}
-      <section id="courses" className="py-28 bg-rock-deep">
+      <section id="courses" className="py-28" style={{ backgroundColor: "#221440" }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Программы</p>
@@ -372,7 +372,7 @@ export default function Index() {
                 <h3 className="font-cormorant text-2xl font-semibold text-rock-light mb-3">
                   {course.title}
                 </h3>
-                <p className="font-cormorant text-rock-ash text-base leading-relaxed mb-6">{course.desc}</p>
+                <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6" style={{ opacity: 0.85 }}>{course.desc}</p>
                 <div className="flex items-center justify-between pt-5 border-t border-white/5">
                   <div className="font-oswald text-xs tracking-widest uppercase text-rock-ash">{course.duration}</div>
                   <div className="font-cormorant text-xl text-gradient-gold">{course.price}</div>
@@ -394,7 +394,7 @@ export default function Index() {
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Обучающий контент</p>
             <h2 className="section-title">Библиотека <em>видеоуроков</em></h2>
-            <p className="font-cormorant text-rock-ash text-lg mt-4 max-w-xl">
+            <p className="font-cormorant text-rock-light text-xl mt-4 max-w-xl" style={{ opacity: 0.8 }}>
               Бесплатные уроки — в открытом доступе. Закрытые — для учеников.
             </p>
           </div>
@@ -453,9 +453,9 @@ export default function Index() {
       <div className="divider-rock" />
 
       {/* THERAPY */}
-      <section id="therapy" className="py-28 bg-rock-deep relative overflow-hidden">
+      <section id="therapy" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-rock-red/5 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl" style={{ backgroundColor: "rgba(123,79,191,0.1)" }} />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-10">
@@ -463,7 +463,7 @@ export default function Index() {
             <h2 className="section-title mb-6">
               Музыко-<em>терапия</em>
             </h2>
-            <p className="font-cormorant text-rock-ash text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="font-cormorant text-rock-light text-xl leading-relaxed max-w-2xl mx-auto" style={{ opacity: 0.85 }}>
               Авторское приложение по музыкотерапии — ваш личный звуковой терапевт.
               Медитации, дыхательные практики, голосовые упражнения для снятия стресса
               и раскрытия голосового потенциала.
@@ -523,13 +523,13 @@ export default function Index() {
       <div className="divider-rock" />
 
       {/* CONSULTATION */}
-      <section id="consultation" className="py-28 bg-rock-deep relative overflow-hidden">
+      <section id="consultation" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-rock-gold/40 to-transparent" />
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="section-eyebrow mb-4">Первый шаг</p>
             <h2 className="section-title">Запись на <em>консультацию</em></h2>
-            <p className="font-cormorant text-rock-ash text-lg mt-4">
+            <p className="font-cormorant text-rock-light text-xl mt-4" style={{ opacity: 0.8 }}>
               Бесплатная 30-минутная консультация — разберём ваш запрос и подберём программу.
             </p>
           </div>
@@ -580,7 +580,7 @@ export default function Index() {
                 <select
                   value={formData.direction}
                   onChange={e => setFormData({ ...formData, direction: e.target.value })}
-                  className="w-full bg-rock-smoke border border-white/10 px-4 py-3 font-cormorant text-rock-light text-base focus:outline-none focus:border-rock-gold/50 transition-colors"
+                  className="w-full border border-white/10 px-4 py-3 font-cormorant text-rock-light text-base focus:outline-none focus:border-rock-gold/50 transition-colors" style={{ backgroundColor: "rgba(123,79,191,0.15)" }}
                 >
                   <option value="">Выбрать направление...</option>
                   <option>Рок и экстрим вокал</option>
@@ -674,7 +674,7 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 border-t border-white/5">
+      <footer className="py-8 border-t border-white/10" style={{ backgroundColor: "#140a24" }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex flex-col items-center md:items-start gap-2">
             <img

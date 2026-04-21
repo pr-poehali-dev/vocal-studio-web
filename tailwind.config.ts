@@ -59,15 +59,17 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				rock: {
-					black: '#0a0a0a',
-					deep: '#111111',
+					black: '#1a0f2e',
+					deep: '#221440',
 					red: '#c41e3a',
 					crimson: '#8b0000',
 					gold: '#c9a227',
 					amber: '#e8b84b',
-					smoke: '#2a2a2a',
-					ash: '#888888',
-					light: '#e8e0d0',
+					smoke: '#2e1f4a',
+					ash: '#9b8db0',
+					light: '#f0e8d8',
+					lilac: '#7b4fbf',
+					violet: '#4a1d8a',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
