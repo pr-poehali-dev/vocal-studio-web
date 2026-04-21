@@ -269,15 +269,15 @@ export default function Index() {
         {/* Фото на весь фон */}
         <div className="absolute inset-0 flex justify-end items-stretch pointer-events-none">
           <div style={{
-            maskImage: "linear-gradient(to left, black 50%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to left, black 50%, transparent 100%)",
-            width: "45%",
+            maskImage: "radial-gradient(ellipse 80% 85% at 60% 50%, black 40%, transparent 100%)",
+            WebkitMaskImage: "radial-gradient(ellipse 80% 85% at 60% 50%, black 40%, transparent 100%)",
+            width: "50%",
             position: "relative",
             display: "flex",
-            alignItems: "flex-end",
+            alignItems: "center",
           }}>
             <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ee3c604d-eaac-4e37-9e54-f7423658412c.JPG"
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/ec1ebb80-e4de-4424-843b-9d1470e550be.png"
               alt="Анна Артман"
               className="w-full object-contain glow-lilac"
               style={{ maxHeight: "750px" }}
