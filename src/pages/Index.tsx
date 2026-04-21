@@ -234,7 +234,7 @@ export default function Index() {
             </h1>
 
             <div className="flex flex-wrap gap-3 mb-8 animate-fade-in scroll-delay-2">
-              {["Фонопед", "Муз. психотерапевт", "Тренер по расщеплению", "Горловое пение", "Сонграйтер"].map((tag) => (
+              {["Фонопед", "Муз. психотерапевт", "Тренер по расщеплению", "Тренер по обертональному звучанию", "Сонграйтер"].map((tag) => (
                 <span key={tag} className="font-oswald text-[10px] tracking-[0.2em] uppercase px-3 py-1 border border-white/15 text-rock-ash">
                   {tag}
                 </span>
