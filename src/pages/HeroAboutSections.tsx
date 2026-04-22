@@ -196,7 +196,7 @@ export default function HeroAboutSections() {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24 flex items-center gap-12">
           <div className="flex-1 min-w-0">
-            <p className="section-eyebrow mb-6 animate-fade-in text-center text-2xl">Личный сайт голосового тренера Анны Артман</p>
+            <p className="section-eyebrow mb-6 animate-fade-in text-right text-2xl">Личный сайт голосового тренера Анны Артман</p>
 
             <h1 className="leading-[0.95] mb-6 animate-fade-in scroll-delay-1 uppercase tracking-tight"
               style={{
