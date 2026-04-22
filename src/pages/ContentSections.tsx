@@ -182,6 +182,14 @@ export default function ContentSections({ formData, setFormData, formSent, handl
                       <Icon name="Lock" size={32} className="text-rock-gold opacity-60" />
                       <span className="font-oswald text-xs tracking-widest uppercase opacity-60">Только для учеников</span>
                     </div>
+                  ) : video.youtubeId ? (
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0`}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   ) : (
                     <div className="flex flex-col items-center gap-2">
                       <div className="w-14 h-14 rounded-full border-2 border-rock-red flex items-center justify-center group-hover:bg-rock-red/20 transition-all">
@@ -190,12 +198,14 @@ export default function ContentSections({ formData, setFormData, formSent, handl
                       <span className="font-oswald text-xs tracking-widest uppercase text-rock-gold">Смотреть</span>
                     </div>
                   )}
-                  <div className="absolute top-3 left-3">
-                    <span className="font-oswald text-[9px] tracking-widest uppercase px-2 py-1 bg-black/60 text-rock-ash border border-white/10">
-                      {video.category}
-                    </span>
-                  </div>
-                  {!video.locked && (
+                  {!video.youtubeId && (
+                    <div className="absolute top-3 left-3">
+                      <span className="font-oswald text-[9px] tracking-widest uppercase px-2 py-1 bg-black/60 text-rock-ash border border-white/10">
+                        {video.category}
+                      </span>
+                    </div>
+                  )}
+                  {!video.locked && !video.youtubeId && video.duration && (
                     <div className="absolute bottom-3 right-3">
                       <span className="font-oswald text-[9px] px-2 py-1 bg-black/60 text-rock-ash">
                         {video.duration}
