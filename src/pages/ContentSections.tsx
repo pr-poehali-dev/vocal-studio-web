@@ -162,7 +162,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
       <section id="videos" className="py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <p className="section-eyebrow mb-4">Обучающий контент</p>
+            <p className="section-eyebrow mb-4">Полезно и интересно</p>
             <h2 className="section-title">Библиотека <em>видеоуроков</em></h2>
             <p className="font-cormorant text-rock-light text-xl mt-4 max-w-xl" style={{ opacity: 0.8 }}>
               Бесплатные уроки — в открытом доступе. Закрытые — для учеников.
