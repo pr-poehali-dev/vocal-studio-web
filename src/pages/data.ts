@@ -71,6 +71,11 @@ export const GALLERY = [
   { src: "https://cdn.poehali.dev/files/0120b599-6bd9-4ce8-8ece-97dba7a56aba.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/0db38af6-49fc-43df-a821-484ecab8f156.JPG", alt: "Анна Артман — Театр Рока" },
   { src: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG", alt: "Анна Артман с микрофоном" },
+  { src: "https://cdn.poehali.dev/files/c38a1712-9403-43c4-8a0e-966cc0f8287a.JPG", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/3c9a55bc-055d-4ab3-8502-7e91330a6a35.JPG", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/01728cc0-c38f-420e-94e9-4fb3c96d3e4f.jpg", alt: "Анна Артман с гитарой" },
+  { src: "https://cdn.poehali.dev/files/83be4928-ff0d-4878-aa20-ddda6a063042.jpg", alt: "Анна Артман с гитарой" },
+  { src: "https://cdn.poehali.dev/files/6f59419d-f1d9-4a54-aa7f-8c2dfebf8a8d.jpg", alt: "Анна Артман на выступлении" },
 ];
 
 export const REVIEWS = [
