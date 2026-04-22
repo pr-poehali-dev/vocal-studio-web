@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMAGE = "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/dac673f5-694e-4cec-8c2d-c5da53e7f95e.jpg";
+const HERO_IMAGE = "https://cdn.poehali.dev/files/bf1d80ba-4889-42b3-b652-08820026fac2.JPG";
 
 const NAV_ITEMS = [
   { label: "О педагоге", href: "#about" },
