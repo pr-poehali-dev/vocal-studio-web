@@ -195,7 +195,7 @@ export default function HeroAboutSections() {
         <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(100,50,180,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24">
-          <p className="section-eyebrow mb-6 animate-fade-in text-right text-2xl w-full">Личный сайт голосового тренера Анны Артман</p>
+          <p className="section-eyebrow mb-6 animate-fade-in text-center text-2xl w-full">Личный сайт голосового тренера Анны Артман</p>
           <div className="flex items-center gap-12">
           <div className="flex-1 min-w-0">
 
