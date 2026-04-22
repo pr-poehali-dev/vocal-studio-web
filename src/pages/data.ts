@@ -63,6 +63,7 @@ export const VIDEOS = [
   { category: "Поёт тренер", title: "Анна Артман — живое выступление 5", duration: "", views: "", locked: false, youtubeId: "BOG0U5Jr5BU" },
   { category: "Поёт тренер", title: "Анна Артман — живое выступление 6", duration: "", views: "", locked: false, youtubeId: "_oht86Q5hGQ" },
   { category: "Поёт тренер", title: "Анна Артман — живое выступление 7", duration: "", views: "", locked: false, youtubeId: "MiBtVotpcak" },
+  { category: "Поёт тренер", title: "Анна Артман — живое выступление 8", duration: "", views: "", locked: false, youtubeId: "nPIwJir9Nsw" },
   { category: "Техники", title: "Гроул без вреда: базовый курс", duration: "14:32", views: "12K", locked: false, youtubeId: "" },
   { category: "Техники", title: "Горловое пение с нуля", duration: "22:18", views: "8.5K", locked: false, youtubeId: "" },
   { category: "Практика", title: "Разогрев голоса: 10 упражнений", duration: "08:45", views: "24K", locked: false, youtubeId: "" },
