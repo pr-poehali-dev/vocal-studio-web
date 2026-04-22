@@ -213,10 +213,11 @@ export default function Index() {
           <img
             src={HERO_IMAGE}
             alt="Анна Артман"
-            className="w-full h-full object-cover object-top opacity-35"
+            className="w-full h-full object-cover object-right-top opacity-60"
+            style={{ objectPosition: "70% top" }}
           />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #1a0f2e 40%, rgba(26,15,46,0.75) 70%, transparent 100%)" }} />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #1a0f2e 0%, transparent 50%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #1a0f2e 35%, rgba(26,15,46,0.85) 55%, rgba(26,15,46,0.3) 80%, transparent 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #1a0f2e 0%, transparent 45%)" }} />
         </div>
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
