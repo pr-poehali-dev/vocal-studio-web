@@ -221,6 +221,9 @@ export default function ContentSections({ formData, setFormData, formSent, handl
                     <Icon name="Eye" size={12} />
                     <span className="font-oswald text-[10px] tracking-wide">{video.views} просмотров</span>
                   </div>
+                  {video.category === "Поёт тренер" && (
+                    <p className="font-oswald text-[11px] tracking-widest uppercase text-rock-gold mt-2">Артман звучит</p>
+                  )}
                 </div>
               </div>
             ))}
