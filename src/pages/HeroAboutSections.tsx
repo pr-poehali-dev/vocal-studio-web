@@ -47,14 +47,8 @@ export default function HeroAboutSections() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={HERO_IMAGE}
-            alt="Анна Артман"
-            className="w-full h-full object-cover object-right-top opacity-100"
-            style={{ objectPosition: "85% top" }}
-          />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #1a0f2e 35%, rgba(26,15,46,0.85) 55%, rgba(26,15,46,0.3) 80%, transparent 100%)" }} />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #1a0f2e 0%, transparent 45%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a0f2e 0%, #2d1a4e 50%, #1a0f2e 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(123,79,191,0.2) 0%, transparent 60%)" }} />
         </div>
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
@@ -143,7 +137,7 @@ export default function HeroAboutSections() {
 
             <div className="flex justify-center items-center" style={{ margin: "-4rem -2rem" }}>
               <img
-                src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG"
+                src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/24816572-50fa-4d7b-a522-fb859536e950.jpg"
                 alt="Rock & Extreme Vocal Coach"
                 className="w-full object-contain glow-lilac"
                 style={{
