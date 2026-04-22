@@ -125,8 +125,14 @@ export default function HeroAboutSections() {
           <div className="flex-1 min-w-0">
             <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт голосового тренера Анны Артман</p>
 
-            <h1 className="font-cormorant font-semibold leading-[0.95] mb-6 animate-fade-in scroll-delay-1 glow-lilac-text text-gradient-red"
-              style={{ fontSize: "clamp(4.5rem, 12vw, 10rem)" }}>
+            <h1 className="leading-[0.95] mb-6 animate-fade-in scroll-delay-1 uppercase tracking-tight"
+              style={{
+                fontSize: "clamp(4.5rem, 12vw, 10rem)",
+                fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
+                fontWeight: 900,
+                color: "#ffffff",
+                textShadow: "0 0 20px rgba(149,79,255,0.9), 0 0 50px rgba(149,79,255,0.6), 0 0 100px rgba(149,79,255,0.3)",
+              }}>
               Анна Артман
             </h1>
 
