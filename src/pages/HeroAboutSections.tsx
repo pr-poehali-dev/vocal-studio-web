@@ -194,9 +194,10 @@ export default function HeroAboutSections() {
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(123,79,191,0.18) 0%, transparent 70%)", filter: "blur(40px)" }} />
         <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(100,50,180,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24 flex items-center gap-12">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24">
+          <p className="section-eyebrow mb-6 animate-fade-in text-right text-2xl w-full">Личный сайт голосового тренера Анны Артман</p>
+          <div className="flex items-center gap-12">
           <div className="flex-1 min-w-0">
-            <p className="section-eyebrow mb-6 animate-fade-in text-right text-2xl">Личный сайт голосового тренера Анны Артман</p>
 
             <h1 className="leading-[0.95] mb-6 animate-fade-in scroll-delay-1 uppercase tracking-tight"
               style={{
@@ -245,6 +246,7 @@ export default function HeroAboutSections() {
                 filter: "drop-shadow(0 0 40px rgba(196,30,58,0.25))",
               }}
             />
+          </div>
           </div>
         </div>
 
