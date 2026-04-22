@@ -340,7 +340,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
             </div>
 
             <div className="md:col-span-2 card-rock p-8">
-              <p className="font-oswald text-xs tracking-[0.3em] uppercase text-rock-gold mb-5">О педагоге</p>
+              <p className="font-oswald text-xs tracking-[0.3em] uppercase text-rock-gold mb-5">О тренере</p>
               <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6">
                 «Театр Рока Артман & Ко» — онлайн и офлайн занятия. Москва,
                 принимаю учеников со всей России и из-за рубежа в онлайн-формате.

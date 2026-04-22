@@ -123,7 +123,7 @@ export default function HeroAboutSections() {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24 flex items-center gap-12">
           <div className="flex-1 min-w-0">
-            <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт вокального коуча Анны Артман</p>
+            <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт вокального тренера Анны Артман</p>
 
             <h1 className="font-cormorant font-semibold leading-[0.95] mb-6 animate-fade-in scroll-delay-1 glow-lilac-text text-gradient-red"
               style={{ fontSize: "clamp(4.5rem, 12vw, 10rem)" }}>
@@ -179,7 +179,7 @@ export default function HeroAboutSections() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-eyebrow mb-4">О педагоге</p>
+              <p className="section-eyebrow mb-4">О тренере</p>
               <h2 className="section-title mb-8 line-gold glow-lilac-text">
                 Голос — это<br /><em>не дар, а навык</em>
               </h2>
