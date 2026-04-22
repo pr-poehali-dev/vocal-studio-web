@@ -76,6 +76,7 @@ export const GALLERY = [
   { src: "https://cdn.poehali.dev/files/01728cc0-c38f-420e-94e9-4fb3c96d3e4f.jpg", alt: "Анна Артман с гитарой" },
   { src: "https://cdn.poehali.dev/files/83be4928-ff0d-4878-aa20-ddda6a063042.jpg", alt: "Анна Артман с гитарой" },
   { src: "https://cdn.poehali.dev/files/6f59419d-f1d9-4a54-aa7f-8c2dfebf8a8d.jpg", alt: "Анна Артман на выступлении" },
+  { src: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/3b79e183-a330-4490-9c30-a30feb7b2eed.jpg", alt: "Анна Артман" },
 ];
 
 export const REVIEWS = [
