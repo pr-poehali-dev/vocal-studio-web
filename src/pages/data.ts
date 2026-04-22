@@ -7,6 +7,7 @@ export const NAV_ITEMS = [
   { label: "Видеотека", href: "#videos" },
   { label: "Музыкотерапия", href: "#therapy" },
   { label: "Отзывы", href: "#reviews" },
+  { label: "Галерея", href: "#gallery" },
   { label: "Контакты", href: "#contacts" },
 ];
 
@@ -61,6 +62,15 @@ export const VIDEOS = [
   { category: "Методика", title: "«Чем он это сделал»: Роберт Плант", duration: "31:07", views: "6.2K", locked: true },
   { category: "Методика", title: "Честер Беннингтон: секреты микста", duration: "28:44", views: "9.1K", locked: true },
   { category: "Психология", title: "Страх сцены: работа со звуком", duration: "18:20", views: "15K", locked: true },
+];
+
+export const GALLERY = [
+  { src: "https://cdn.poehali.dev/files/b29ca24e-d7f1-4596-b268-f20749b4aea9.jpg", alt: "Анна Артман на сцене" },
+  { src: "https://cdn.poehali.dev/files/e4d95bd6-d088-4474-9640-c82ecf77e13a.jpg", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/819f2a44-667d-45aa-a43a-1995be147b24.jpg", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/0120b599-6bd9-4ce8-8ece-97dba7a56aba.jpg", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/0db38af6-49fc-43df-a821-484ecab8f156.JPG", alt: "Анна Артман — Театр Рока" },
+  { src: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG", alt: "Анна Артман с микрофоном" },
 ];
 
 export const REVIEWS = [

@@ -1,12 +1,92 @@
+import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { SoundWaveSVG } from "./HeroAboutSections";
-import { DIRECTIONS, COURSES, VIDEOS, REVIEWS } from "./data";
+import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY } from "./data";
 
 interface ContentSectionsProps {
   formData: { name: string; phone: string; direction: string; message: string };
   setFormData: (v: { name: string; phone: string; direction: string; message: string }) => void;
   formSent: boolean;
   handleSubmit: (e: React.FormEvent) => void;
+}
+
+function GallerySection() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const prev = () => setLightbox((i) => (i !== null ? (i - 1 + GALLERY.length) % GALLERY.length : null));
+  const next = () => setLightbox((i) => (i !== null ? (i + 1) % GALLERY.length : null));
+
+  return (
+    <section id="gallery" className="py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <p className="section-eyebrow mb-4">Сцена и студия</p>
+          <h2 className="section-title">Фото<em>галерея</em></h2>
+        </div>
+
+        <div className="columns-2 md:columns-3 gap-4 space-y-4">
+          {GALLERY.map((photo, i) => (
+            <div
+              key={i}
+              className="break-inside-avoid cursor-pointer group relative overflow-hidden"
+              onClick={() => setLightbox(i)}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                style={{ display: "block" }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                <Icon name="ZoomIn" size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          style={{ backgroundColor: "rgba(10,5,20,0.95)" }}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute left-4 md:left-10 text-white/70 hover:text-white transition-colors z-10"
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+          >
+            <Icon name="ChevronLeft" size={48} />
+          </button>
+
+          <img
+            src={GALLERY[lightbox].src}
+            alt={GALLERY[lightbox].alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            style={{ filter: "drop-shadow(0 0 40px rgba(196,30,58,0.3))" }}
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          <button
+            className="absolute right-4 md:right-10 text-white/70 hover:text-white transition-colors z-10"
+            onClick={(e) => { e.stopPropagation(); next(); }}
+          >
+            <Icon name="ChevronRight" size={48} />
+          </button>
+
+          <button
+            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors"
+            onClick={() => setLightbox(null)}
+          >
+            <Icon name="X" size={28} />
+          </button>
+
+          <div className="absolute bottom-6 text-rock-ash font-oswald text-xs tracking-widest">
+            {lightbox + 1} / {GALLERY.length}
+          </div>
+        </div>
+      )}
+    </section>
+  );
 }
 
 export default function ContentSections({ formData, setFormData, formSent, handleSubmit }: ContentSectionsProps) {
@@ -209,6 +289,11 @@ export default function ContentSections({ formData, setFormData, formSent, handl
           </div>
         </div>
       </section>
+
+      <div className="divider-rock" />
+
+      {/* GALLERY */}
+      <GallerySection />
 
       <div className="divider-rock" />
 
