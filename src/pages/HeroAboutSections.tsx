@@ -1,4 +1,4 @@
-import { HERO_IMAGE } from "./data";
+import { useEffect, useRef } from "react";
 
 function WaveVisualizer() {
   const bars = [4, 8, 12, 18, 24, 30, 24, 18, 14, 10, 7, 5, 8, 14, 22, 28, 32, 26, 18, 12, 8, 5, 9, 16, 24];
@@ -41,6 +41,70 @@ function SoundWaveSVG() {
 
 export { SoundWaveSVG };
 
+function StarField() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let animId: number;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const STAR_COUNT = 180;
+    const stars = Array.from({ length: STAR_COUNT }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.4 + 0.2,
+      speed: Math.random() * 0.25 + 0.05,
+      alpha: Math.random(),
+      dAlpha: (Math.random() * 0.004 + 0.001) * (Math.random() > 0.5 ? 1 : -1),
+      color: Math.random() > 0.7 ? "#c9a227" : Math.random() > 0.5 ? "#c41e3a" : "#ffffff",
+    }));
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach((s) => {
+        s.alpha += s.dAlpha;
+        if (s.alpha >= 1) { s.alpha = 1; s.dAlpha *= -1; }
+        if (s.alpha <= 0) { s.alpha = 0; s.dAlpha *= -1; }
+        s.y -= s.speed;
+        if (s.y < -2) { s.y = canvas.height + 2; s.x = Math.random() * canvas.width; }
+
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = s.color;
+        ctx.globalAlpha = s.alpha * 0.85;
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+      animId = requestAnimationFrame(draw);
+    };
+    draw();
+
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full"
+      style={{ pointerEvents: "none" }}
+    />
+  );
+}
+
 export default function HeroAboutSections() {
   return (
     <>
@@ -49,6 +113,7 @@ export default function HeroAboutSections() {
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a0f2e 0%, #2d1a4e 50%, #1a0f2e 100%)" }} />
           <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(123,79,191,0.2) 0%, transparent 60%)" }} />
+          <StarField />
         </div>
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
