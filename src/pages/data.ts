@@ -3,7 +3,7 @@ export const HERO_IMAGE = "https://cdn.poehali.dev/files/bf1d80ba-4889-42b3-b652
 export const NAV_ITEMS = [
   { label: "О тренере", href: "#about" },
   { label: "Направления", href: "#directions" },
-  { label: "Курсы", href: "#courses" },
+  { label: "Мастер-классы", href: "#courses" },
   { label: "Видеотека", href: "#videos" },
   { label: "Музыкотерапия", href: "#therapy" },
   { label: "Отзывы", href: "#reviews" },

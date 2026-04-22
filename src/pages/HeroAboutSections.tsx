@@ -226,7 +226,7 @@ export default function HeroAboutSections() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12 animate-fade-in scroll-delay-4">
-              <a href="#courses" className="btn-gold">Смотреть курсы</a>
+              <a href="#courses" className="btn-gold">Смотреть мастер-классы</a>
               <a href="#consultation" className="btn-rock">Записаться на консультацию</a>
             </div>
 
