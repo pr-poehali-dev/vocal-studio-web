@@ -163,10 +163,14 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Полезно и интересно</p>
-            <h2 className="section-title">Библиотека <em>видеоуроков</em></h2>
-            <p className="font-cormorant text-rock-light text-xl mt-4 max-w-xl" style={{ opacity: 0.8 }}>
-              Бесплатные уроки — в открытом доступе. Закрытые — для учеников.
-            </p>
+            <h2 className="section-title"><em>Видеотека</em></h2>
+            <div className="flex flex-wrap gap-3 mt-6">
+              {["Поёт тренер", "Поют ученики", "Полезные видосики"].map((tab) => (
+                <span key={tab} className="font-oswald text-[10px] tracking-[0.2em] uppercase px-4 py-2 border border-white/15 text-rock-ash">
+                  {tab}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
