@@ -137,7 +137,7 @@ export default function HeroAboutSections() {
             </h1>
 
             <div className="flex flex-wrap gap-3 mb-8 animate-fade-in scroll-delay-2">
-              {["Фонопед", "Муз. психотерапевт", "Тренер по рок и экстрим вокалу", "Тренер по обертональному звучанию", "Тренер по эстрадно-джазовому вокалу", "Сонграйтер", "Вокальный стилист"].map((tag) => (
+              {["Тренер по рок и экстрим вокалу", "Тренер по обертональному звучанию", "Тренер по эстрадно-джазовому вокалу", "Фонопед", "Муз. психотерапевт", "Сонграйтер", "Вокальный стилист"].map((tag) => (
                 <span key={tag} className="font-oswald text-[10px] tracking-[0.2em] uppercase px-3 py-1 border border-white/15 text-rock-ash">
                   {tag}
                 </span>
