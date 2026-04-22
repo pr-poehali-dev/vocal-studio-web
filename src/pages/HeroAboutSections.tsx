@@ -121,8 +121,8 @@ export default function HeroAboutSections() {
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(123,79,191,0.18) 0%, transparent 70%)", filter: "blur(40px)" }} />
         <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(100,50,180,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
-          <div className="max-w-3xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24 flex items-center gap-12">
+          <div className="flex-1 min-w-0">
             <p className="section-eyebrow mb-6 animate-fade-in">Личный сайт вокального коуча Анны Артман</p>
 
             <h1 className="font-cormorant font-semibold leading-[0.95] mb-6 animate-fade-in scroll-delay-1 glow-lilac-text text-gradient-red"
@@ -153,6 +153,19 @@ export default function HeroAboutSections() {
             <div className="animate-fade-in scroll-delay-5">
               <WaveVisualizer />
             </div>
+          </div>
+
+          <div className="hidden lg:block flex-shrink-0 w-[420px] animate-fade-in scroll-delay-2" style={{ marginBottom: "-2rem" }}>
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG"
+              alt="Анна Артман"
+              className="w-full object-contain"
+              style={{
+                maskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%)",
+                filter: "drop-shadow(0 0 40px rgba(196,30,58,0.25))",
+              }}
+            />
           </div>
         </div>
 
