@@ -127,7 +127,7 @@ export default function HeroAboutSections() {
 
             <h1 className="leading-[0.95] mb-6 animate-fade-in scroll-delay-1 uppercase tracking-tight"
               style={{
-                fontSize: "clamp(4.5rem, 12vw, 10rem)",
+                fontSize: "clamp(3.5rem, 9vw, 7.5rem)",
                 fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
                 fontWeight: 900,
                 color: "#ffffff",
