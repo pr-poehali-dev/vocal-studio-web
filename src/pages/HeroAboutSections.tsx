@@ -105,6 +105,79 @@ function StarField() {
   );
 }
 
+function Equalizer() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let animId: number;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const BAR_COUNT = 80;
+    const phases = Array.from({ length: BAR_COUNT }, () => Math.random() * Math.PI * 2);
+    const speeds = Array.from({ length: BAR_COUNT }, () => 0.015 + Math.random() * 0.025);
+    const amps = Array.from({ length: BAR_COUNT }, () => 0.2 + Math.random() * 0.8);
+    let t = 0;
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const w = canvas.width;
+      const h = canvas.height;
+      const barW = w / BAR_COUNT;
+      const maxH = h * 0.38;
+      const centerY = h * 0.72;
+
+      for (let i = 0; i < BAR_COUNT; i++) {
+        phases[i] += speeds[i];
+        const wave =
+          Math.sin(phases[i]) * 0.5 +
+          Math.sin(phases[i] * 1.7 + t * 0.8) * 0.3 +
+          Math.sin(phases[i] * 0.5 + t * 1.2) * 0.2;
+        const barH = Math.abs(wave) * maxH * amps[i] + 2;
+        const x = i * barW + barW * 0.15;
+        const bw = barW * 0.7;
+
+        const ratio = i / BAR_COUNT;
+        const r = Math.round(196 + (149 - 196) * ratio);
+        const g = Math.round(30 + (79 - 30) * ratio);
+        const b = Math.round(58 + (255 - 58) * ratio);
+        const alpha = 0.18 + Math.abs(wave) * 0.35;
+
+        ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
+        ctx.fillRect(x, centerY - barH, bw, barH);
+        ctx.fillRect(x, centerY, bw, barH * 0.4);
+      }
+
+      t += 0.018;
+      animId = requestAnimationFrame(draw);
+    };
+    draw();
+
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full"
+      style={{ pointerEvents: "none" }}
+    />
+  );
+}
+
 export default function HeroAboutSections() {
   return (
     <>
@@ -114,6 +187,7 @@ export default function HeroAboutSections() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a0f2e 0%, #2d1a4e 50%, #1a0f2e 100%)" }} />
           <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(123,79,191,0.2) 0%, transparent 60%)" }} />
           <StarField />
+          <Equalizer />
         </div>
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
