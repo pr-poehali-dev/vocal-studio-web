@@ -32,10 +32,6 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
           ))}
         </div>
 
-        <a href="#consultation" className="hidden md:block btn-rock text-xs">
-          Записаться
-        </a>
-
         <button
           className="md:hidden text-rock-light"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -56,9 +52,6 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
               {item.label}
             </a>
           ))}
-          <a href="#consultation" className="btn-gold text-center mt-2">
-            Записаться
-          </a>
         </div>
       )}
     </nav>
