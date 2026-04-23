@@ -127,7 +127,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Программы</p>
-            <h2 className="section-title">Прокачка <em>голоса</em></h2>
+            <h2 className="section-title">Прокачка <em>голоса</em> (мастер-классы и лекции)</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
