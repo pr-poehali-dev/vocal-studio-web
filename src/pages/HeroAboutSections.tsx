@@ -237,7 +237,7 @@ export default function HeroAboutSections() {
 
           <div className="hidden lg:block flex-shrink-0 w-[420px] animate-fade-in scroll-delay-2" style={{ marginBottom: "-2rem" }}>
             <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG"
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/24816572-50fa-4d7b-a522-fb859536e950.jpg"
               alt="Анна Артман"
               className="w-full object-contain"
               style={{
@@ -305,7 +305,7 @@ export default function HeroAboutSections() {
 
             <div className="flex justify-center items-center" style={{ margin: "-4rem -2rem" }}>
               <img
-                src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/24816572-50fa-4d7b-a522-fb859536e950.jpg"
+                src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG"
                 alt="Rock & Extreme Vocal Coach"
                 className="w-full object-contain glow-lilac"
                 style={{
