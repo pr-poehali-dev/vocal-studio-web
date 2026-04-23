@@ -1,14 +1,14 @@
 export const HERO_IMAGE = "https://cdn.poehali.dev/files/bf1d80ba-4889-42b3-b652-08820026fac2.JPG";
 
 export const NAV_ITEMS = [
-  { label: "О тренере", href: "#about" },
-  { label: "Направления", href: "#directions" },
-  { label: "Мастер-классы", href: "#courses" },
-  { label: "Видеотека", href: "#videos" },
-  { label: "Музыкотерапия", href: "#therapy" },
-  { label: "Отзывы", href: "#reviews" },
-  { label: "Галерея", href: "#gallery" },
-  { label: "Контакты", href: "#contacts" },
+  { label: "Личное дело", href: "#about" },
+  { label: "Чему научу", href: "#directions" },
+  { label: "Прокачка голоса", href: "#courses" },
+  { label: "Видосы", href: "#videos" },
+  { label: "Лечим музыкой", href: "#therapy" },
+  { label: "Они уже в деле", href: "#reviews" },
+  { label: "В кадре", href: "#gallery" },
+  { label: "Напиши мне", href: "#contacts" },
 ];
 
 export const DIRECTIONS = [

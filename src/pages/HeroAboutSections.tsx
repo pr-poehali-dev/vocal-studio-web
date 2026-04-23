@@ -260,7 +260,7 @@ export default function HeroAboutSections() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="section-eyebrow mb-4">О тренере</p>
+              <p className="section-eyebrow mb-4">Личное дело</p>
               <h2 className="section-title mb-8 line-gold glow-lilac-text">
                 Голос — это<br /><em>не дар, а навык</em>
               </h2>

@@ -21,7 +21,7 @@ function GallerySection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="section-eyebrow mb-4">Сцена и студия</p>
-          <h2 className="section-title">Фото<em>галерея</em></h2>
+          <h2 className="section-title"><em>В кадре</em></h2>
         </div>
 
         <div className="columns-2 md:columns-3 gap-4 space-y-4">
@@ -99,7 +99,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="section-eyebrow mb-4">Чему я учу</p>
-            <h2 className="section-title">Направления <em>обучения</em></h2>
+            <h2 className="section-title">Чему <em>научу</em></h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -127,7 +127,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Программы</p>
-            <h2 className="section-title">Мастер-классы и <em>обучение</em></h2>
+            <h2 className="section-title">Прокачка <em>голоса</em></h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -163,7 +163,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Полезно и интересно</p>
-            <h2 className="section-title"><em>Видеотека</em></h2>
+            <h2 className="section-title"><em>Видосы</em></h2>
             <div className="flex flex-wrap gap-3 mt-6">
               {["Поёт тренер", "Поют ученики", "Полезные видосики"].map((tab) => (
                 <span key={tab} className="font-oswald text-[10px] tracking-[0.2em] uppercase px-4 py-2 border border-white/15 text-rock-ash">
@@ -248,7 +248,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
           <div className="text-center mb-10">
             <p className="section-eyebrow mb-4">Приложение</p>
             <h2 className="section-title mb-6">
-              Музыко-<em>терапия</em>
+              Лечим <em>музыкой</em>
             </h2>
             <p className="font-cormorant text-rock-light text-xl leading-relaxed max-w-2xl mx-auto" style={{ opacity: 0.85 }}>
               Авторское приложение по музыкотерапии — ваш личный звуковой терапевт.
@@ -280,7 +280,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="section-eyebrow mb-4">Говорят ученики</p>
-            <h2 className="section-title">Отзывы и <em>истории</em></h2>
+            <h2 className="section-title">Они уже <em>в деле</em></h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
