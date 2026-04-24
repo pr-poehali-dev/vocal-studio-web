@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { SoundWaveSVG } from "./HeroAboutSections";
-import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY } from "./data";
+import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY, ARTICLES } from "./data";
 
 interface ContentSectionsProps {
   formData: { name: string; phone: string; direction: string; message: string };
@@ -150,6 +150,45 @@ export default function ContentSections({ formData, setFormData, formSent, handl
                 <a href="#consultation" className="btn-rock w-full text-center mt-5 block">
                   Узнать подробнее
                 </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="divider-rock" />
+
+      {/* SMART ARTICLES */}
+      <section id="smart" className="py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="section-eyebrow mb-4">Читать полезно</p>
+            <h2 className="section-title">Много умных слов <em>о главном</em></h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ARTICLES.map((article, i) => (
+              <div
+                key={i}
+                className="card-rock p-7 group hover:border-rock-gold/30 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col"
+              >
+                <div className="flex items-center justify-between mb-5">
+                  <span className="font-oswald text-[10px] tracking-[0.25em] uppercase px-3 py-1 bg-rock-red/20 text-rock-red border border-rock-red/30">
+                    {article.tag}
+                  </span>
+                  <span className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash">{article.readTime}</span>
+                </div>
+                <div className="text-3xl mb-4">{article.emoji}</div>
+                <h3 className="font-cormorant text-xl font-semibold text-rock-light mb-3 group-hover:text-rock-gold transition-colors leading-snug">
+                  {article.title}
+                </h3>
+                <p className="font-cormorant text-rock-light text-lg leading-relaxed flex-1" style={{ opacity: 0.75 }}>
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center gap-2 mt-6 pt-5 border-t border-white/5 text-rock-gold group-hover:gap-3 transition-all duration-300">
+                  <span className="font-oswald text-[10px] tracking-widest uppercase">Читать</span>
+                  <Icon name="ArrowRight" size={14} />
+                </div>
               </div>
             ))}
           </div>
