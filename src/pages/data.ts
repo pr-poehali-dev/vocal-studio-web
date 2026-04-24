@@ -4,6 +4,7 @@ export const NAV_ITEMS = [
   { label: "Личное дело", href: "#about" },
   { label: "Чему научу", href: "#directions" },
   { label: "Прокачка голоса (мастер-классы и лекции)", href: "#courses" },
+  { label: "Много умных слов о главном", href: "#smart" },
   { label: "Видосы", href: "#videos" },
   { label: "Лечим музыкой", href: "#therapy" },
   { label: "Они уже в деле", href: "#reviews" },
