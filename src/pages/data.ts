@@ -114,6 +114,7 @@ export const GALLERY = [
   { src: "https://cdn.poehali.dev/files/d214aa7f-dab0-4a0f-8bf4-46648ca9251c.jpg", alt: "Анна Артман — образ демона" },
   { src: "https://cdn.poehali.dev/files/a6138ed6-1959-4a1d-96ff-dce2f805d89e.jpg", alt: "Анна Артман с микрофоном" },
   { src: "https://cdn.poehali.dev/files/7fdea77b-2384-4a66-a65d-4682a387ca87.jpg", alt: "Анна Артман — портрет" },
+  { src: "https://cdn.poehali.dev/files/0194d75e-1f36-4716-a118-a81386dff651.jpg", alt: "Анна Артман на сцене" },
 ];
 
 export const REVIEWS = [
