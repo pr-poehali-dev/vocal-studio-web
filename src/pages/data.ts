@@ -78,7 +78,7 @@ export const VIDEOS = [
 ];
 
 export const GALLERY = [
-  { src: "https://cdn.poehali.dev/files/b29ca24e-d7f1-4596-b268-f20749b4aea9.jpg", alt: "Анна Артман на сцене" },
+  { src: "https://cdn.poehali.dev/files/b29ca24e-d7f1-4596-b268-f20749b4aea9.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/e4d95bd6-d088-4474-9640-c82ecf77e13a.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/819f2a44-667d-45aa-a43a-1995be147b24.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/0120b599-6bd9-4ce8-8ece-97dba7a56aba.jpg", alt: "Анна Артман" },
@@ -88,13 +88,13 @@ export const GALLERY = [
   { src: "https://cdn.poehali.dev/files/3c9a55bc-055d-4ab3-8502-7e91330a6a35.JPG", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/01728cc0-c38f-420e-94e9-4fb3c96d3e4f.jpg", alt: "Анна Артман с гитарой" },
   { src: "https://cdn.poehali.dev/files/83be4928-ff0d-4878-aa20-ddda6a063042.jpg", alt: "Анна Артман с гитарой" },
-  { src: "https://cdn.poehali.dev/files/6f59419d-f1d9-4a54-aa7f-8c2dfebf8a8d.jpg", alt: "Анна Артман на выступлении" },
+  { src: "https://cdn.poehali.dev/files/6f59419d-f1d9-4a54-aa7f-8c2dfebf8a8d.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/3b79e183-a330-4490-9c30-a30feb7b2eed.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/3161fc50-0f58-45d1-88cc-068bf777f777.jpg", alt: "Анна Артман с цветами" },
-  { src: "https://cdn.poehali.dev/files/cefbd63f-cbde-49e1-957b-58747cdf2bc6.jpg", alt: "Анна Артман на сцене с микрофоном" },
+  { src: "https://cdn.poehali.dev/files/cefbd63f-cbde-49e1-957b-58747cdf2bc6.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/c0b26a66-7262-47ab-bbae-846b0890a800.JPG", alt: "Анна Артман — образ" },
-  { src: "https://cdn.poehali.dev/files/8251277f-349a-4a84-a846-f936a16ca4ec.jpg", alt: "Анна Артман на выступлении" },
-  { src: "https://cdn.poehali.dev/files/9d7cd3fe-0e22-4942-a755-dcae0f7a0cd6.JPG", alt: "Анна Артман в студии" },
+  { src: "https://cdn.poehali.dev/files/8251277f-349a-4a84-a846-f936a16ca4ec.jpg", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/9d7cd3fe-0e22-4942-a755-dcae0f7a0cd6.JPG", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/882a1878-d018-4f8a-ab38-2eb5896a09a1.JPG", alt: "Анна Артман за синтезатором" },
   { src: "https://cdn.poehali.dev/files/7b2c95d1-3f70-41a6-815b-6317608cfaff.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/5ad2a046-b719-4034-84e4-4e36cc2394f1.JPG", alt: "Анна Артман — рок знак" },
@@ -106,15 +106,15 @@ export const GALLERY = [
   { src: "https://cdn.poehali.dev/files/57db4e99-df19-4bf3-bb92-ec7cb268f1e7.JPG", alt: "Анна Артман — тёмный образ" },
   { src: "https://cdn.poehali.dev/files/e75c8fab-4151-4834-bc5f-84e7c3432154.JPG", alt: "Анна Артман в очках" },
   { src: "https://cdn.poehali.dev/files/86e4b4b7-5834-420b-a509-fa9b88fb90de.jpg", alt: "Анна Артман с микрофоном в красном образе" },
-  { src: "https://cdn.poehali.dev/files/42610e31-25db-4e0b-9d12-63f5359bc087.jpg", alt: "Анна Артман на сцене" },
+  { src: "https://cdn.poehali.dev/files/42610e31-25db-4e0b-9d12-63f5359bc087.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/3b4958a2-47be-4da6-9642-b482eff20d37.jpg", alt: "Анна Артман — панк образ" },
-  { src: "https://cdn.poehali.dev/files/8c769c03-2dbc-47d3-8235-44ff7d9f62f6.jpg", alt: "Анна Артман на выступлении" },
-  { src: "https://cdn.poehali.dev/files/8a833a4e-e151-42b7-aad1-c5b8c6983adc.jpg", alt: "Анна Артман на сцене с листами" },
+  { src: "https://cdn.poehali.dev/files/8c769c03-2dbc-47d3-8235-44ff7d9f62f6.jpg", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/8a833a4e-e151-42b7-aad1-c5b8c6983adc.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/fabf4e0b-b2e4-4a70-8b57-b6315c29ecaf.jpg", alt: "Анна Артман в синем свете" },
   { src: "https://cdn.poehali.dev/files/d214aa7f-dab0-4a0f-8bf4-46648ca9251c.jpg", alt: "Анна Артман — образ демона" },
   { src: "https://cdn.poehali.dev/files/a6138ed6-1959-4a1d-96ff-dce2f805d89e.jpg", alt: "Анна Артман с микрофоном" },
   { src: "https://cdn.poehali.dev/files/7fdea77b-2384-4a66-a65d-4682a387ca87.jpg", alt: "Анна Артман — портрет" },
-  { src: "https://cdn.poehali.dev/files/0194d75e-1f36-4716-a118-a81386dff651.jpg", alt: "Анна Артман на сцене" },
+  { src: "https://cdn.poehali.dev/files/0194d75e-1f36-4716-a118-a81386dff651.jpg", alt: "Анна Артман" },
 ];
 
 export const REVIEWS = [
