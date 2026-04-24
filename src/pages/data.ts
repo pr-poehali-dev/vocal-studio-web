@@ -90,6 +90,11 @@ export const GALLERY = [
   { src: "https://cdn.poehali.dev/files/83be4928-ff0d-4878-aa20-ddda6a063042.jpg", alt: "Анна Артман с гитарой" },
   { src: "https://cdn.poehali.dev/files/6f59419d-f1d9-4a54-aa7f-8c2dfebf8a8d.jpg", alt: "Анна Артман на выступлении" },
   { src: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/3b79e183-a330-4490-9c30-a30feb7b2eed.jpg", alt: "Анна Артман" },
+  { src: "https://cdn.poehali.dev/files/3161fc50-0f58-45d1-88cc-068bf777f777.jpg", alt: "Анна Артман с цветами" },
+  { src: "https://cdn.poehali.dev/files/cefbd63f-cbde-49e1-957b-58747cdf2bc6.jpg", alt: "Анна Артман на сцене с микрофоном" },
+  { src: "https://cdn.poehali.dev/files/c0b26a66-7262-47ab-bbae-846b0890a800.JPG", alt: "Анна Артман — образ" },
+  { src: "https://cdn.poehali.dev/files/8251277f-349a-4a84-a846-f936a16ca4ec.jpg", alt: "Анна Артман на выступлении" },
+  { src: "https://cdn.poehali.dev/files/9d7cd3fe-0e22-4942-a755-dcae0f7a0cd6.JPG", alt: "Анна Артман в студии" },
 ];
 
 export const REVIEWS = [
