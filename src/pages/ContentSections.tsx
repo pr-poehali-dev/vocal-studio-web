@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { SoundWaveSVG } from "./HeroAboutSections";
-import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY, ARTICLES } from "./data";
+import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY, ARTICLES, BOOK } from "./data";
 
 interface ContentSectionsProps {
   formData: { name: string; phone: string; direction: string; message: string };
@@ -447,6 +447,75 @@ export default function ContentSections({ formData, setFormData, formSent, handl
               </p>
             </form>
           )}
+        </div>
+      </section>
+
+      <div className="divider-rock" />
+
+      {/* BOOK */}
+      <section id="book" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#1a0f2e" }}>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full blur-3xl" style={{ backgroundColor: "rgba(201,162,39,0.06)" }} />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-3xl" style={{ backgroundColor: "rgba(196,30,58,0.05)" }} />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* Обложка */}
+            <div className="flex justify-center lg:justify-end order-first lg:order-last">
+              <div className="relative max-w-xs w-full">
+                <div className="absolute -inset-4 rounded-sm blur-2xl opacity-30" style={{ background: "linear-gradient(135deg, #c9a227, #c41e3a)" }} />
+                <img
+                  src={BOOK.cover}
+                  alt={BOOK.title}
+                  className="relative w-full object-cover shadow-2xl"
+                  style={{ filter: "drop-shadow(0 20px 60px rgba(201,162,39,0.3))" }}
+                />
+              </div>
+            </div>
+
+            {/* Текст */}
+            <div>
+              <p className="section-eyebrow mb-4">Книга</p>
+              <h2 className="section-title mb-4">
+                <em>{BOOK.title}</em>
+              </h2>
+              <p className="font-cormorant text-rock-gold text-xl mb-6 leading-snug">{BOOK.subtitle}</p>
+              <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-8" style={{ opacity: 0.85 }}>
+                {BOOK.description}
+              </p>
+
+              <ul className="space-y-3 mb-10">
+                {BOOK.features.map((f, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rock-gold flex-shrink-0" />
+                    <span className="font-cormorant text-rock-light text-lg">{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Форматы */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                {BOOK.formats.map((fmt, i) => (
+                  <div key={i} className="card-rock p-6 flex flex-col gap-4 hover:border-rock-gold/30 transition-all duration-300">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl">{fmt.icon}</span>
+                      <span className="font-oswald text-[10px] tracking-[0.25em] uppercase text-rock-ash border border-white/10 px-3 py-1">
+                        {fmt.type}
+                      </span>
+                    </div>
+                    <p className="font-cormorant text-rock-ash text-base leading-snug">{fmt.desc}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                      <span className="font-cormorant text-2xl text-gradient-gold">{fmt.price}</span>
+                      <a href="#consultation" className="btn-rock text-sm px-5 py-2">
+                        Купить
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
