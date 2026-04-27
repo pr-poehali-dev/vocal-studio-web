@@ -23,7 +23,7 @@ export const BOOK = {
     "Практики, которые работают",
     "Дыши. Говори. Пой. Будь здоров!",
   ],
-  cover: "https://cdn.poehali.dev/files/2ea137ff-bd66-4c3d-9773-1b4635f79264.png",
+  cover: "https://cdn.poehali.dev/files/da0a1645-cb8f-4507-9bcc-d46db9b13f8f.png",
   formats: [
     { type: "Электронная", icon: "📱", price: "800 ₽", desc: "PDF + EPUB, читай сразу после оплаты" },
     { type: "Аудиокнига", icon: "🎧", price: "1 000 ₽", desc: "MP3, слушай в любом месте и в любое время" },
