@@ -463,7 +463,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
 
             {/* Обложка */}
             <div className="flex justify-center lg:justify-end order-first lg:order-last">
-              <div className="relative max-w-xs w-full">
+              <div className="relative max-w-lg w-full">
                 <div className="absolute -inset-4 rounded-sm blur-2xl opacity-30" style={{ background: "linear-gradient(135deg, #c9a227, #c41e3a)" }} />
                 <img
                   src={BOOK.cover}
