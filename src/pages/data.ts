@@ -89,12 +89,7 @@ export const VIDEOS = [
   { category: "Поёт тренер", title: "Анна Артман — живое выступление 11", duration: "", views: "", locked: false, youtubeId: "hzREhhTNG94" },
   { category: "Поёт тренер", title: "Анна Артман — живое выступление 12", duration: "", views: "", locked: false, youtubeId: "muDYZ0PxtZM" },
   { category: "Поёт тренер", title: "Анна Артман — живое выступление 13", duration: "", views: "", locked: false, youtubeId: "Lb04KB3LaY8" },
-  { category: "Техники", title: "Гроул без вреда: базовый курс", duration: "14:32", views: "12K", locked: false, youtubeId: "" },
-  { category: "Техники", title: "Горловое пение с нуля", duration: "22:18", views: "8.5K", locked: false, youtubeId: "" },
-  { category: "Практика", title: "Разогрев голоса: 10 упражнений", duration: "08:45", views: "24K", locked: false, youtubeId: "" },
-  { category: "Методика", title: "«Чем он это сделал»: Роберт Плант", duration: "31:07", views: "6.2K", locked: true, youtubeId: "" },
-  { category: "Методика", title: "Честер Беннингтон: секреты микста", duration: "28:44", views: "9.1K", locked: true, youtubeId: "" },
-  { category: "Психология", title: "Страх сцены: работа со звуком", duration: "18:20", views: "15K", locked: true, youtubeId: "" },
+
 ];
 
 export const GALLERY = [
