@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 function WaveVisualizer() {
   const bars = [4, 8, 12, 18, 24, 30, 24, 18, 14, 10, 7, 5, 8, 14, 22, 28, 32, 26, 18, 12, 8, 5, 9, 16, 24];
@@ -232,6 +233,10 @@ export default function HeroAboutSections() {
 
             <div className="animate-fade-in scroll-delay-5">
               <WaveVisualizer />
+            </div>
+
+            <div className="mt-6 animate-fade-in scroll-delay-5" style={{ opacity: 0.75 }}>
+              <AnimatedWaveCanvas height={52} />
             </div>
           </div>
 
