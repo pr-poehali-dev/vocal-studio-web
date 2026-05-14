@@ -2,6 +2,15 @@ import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import HeroAboutSections from "./HeroAboutSections";
 import ContentSections from "./ContentSections";
+import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
+
+function WaveDivider() {
+  return (
+    <div style={{ marginTop: "-1px", marginBottom: "-1px", lineHeight: 0, opacity: 0.6 }}>
+      <AnimatedWaveCanvas height={48} />
+    </div>
+  );
+}
 
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +33,7 @@ export default function Index() {
     <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#1a0f2e" }}>
       <NavBar scrolled={scrolled} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <HeroAboutSections />
+      <WaveDivider />
       <ContentSections
         formData={formData}
         setFormData={setFormData}

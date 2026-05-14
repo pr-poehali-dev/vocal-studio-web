@@ -2,6 +2,15 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { SoundWaveSVG } from "./HeroAboutSections";
 import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY, ARTICLES, BOOK } from "./data";
+import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
+
+function WaveDivider() {
+  return (
+    <div style={{ marginTop: "-1px", marginBottom: "-1px", lineHeight: 0, opacity: 0.55 }}>
+      <AnimatedWaveCanvas height={48} />
+    </div>
+  );
+}
 
 interface ContentSectionsProps {
   formData: { name: string; phone: string; direction: string; message: string };
@@ -92,7 +101,7 @@ function GallerySection() {
 export default function ContentSections({ formData, setFormData, formSent, handleSubmit }: ContentSectionsProps) {
   return (
     <>
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* DIRECTIONS */}
       <section id="directions" className="py-28">
@@ -120,7 +129,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* COURSES */}
       <section id="courses" className="py-28" style={{ backgroundColor: "#221440" }}>
@@ -156,7 +165,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* SMART ARTICLES */}
       <section id="smart" className="py-28">
@@ -195,7 +204,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* VIDEO LIBRARY */}
       <section id="videos" className="py-28">
@@ -276,7 +285,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* THERAPY */}
       <section id="therapy" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
@@ -312,7 +321,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* REVIEWS */}
       <section id="reviews" className="py-28">
@@ -346,12 +355,12 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* GALLERY */}
       <GallerySection />
 
-      <div className="divider-rock" />
+      <WaveDivider />
 
       {/* CONSULTATION */}
       <section id="consultation" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
