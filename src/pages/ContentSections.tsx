@@ -277,11 +277,6 @@ export default function ContentSections({ formData, setFormData, formSent, handl
             ))}
           </div>
 
-          <div className="text-center mt-10">
-            <a href="#consultation" className="btn-gold">
-              Получить доступ к закрытым урокам
-            </a>
-          </div>
         </div>
       </section>
 
