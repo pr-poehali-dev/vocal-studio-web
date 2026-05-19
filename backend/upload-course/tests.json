@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "GET course files list trigger",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"total": "number"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
