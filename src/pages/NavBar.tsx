@@ -15,8 +15,8 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden"
         style={{
           background: scrolled
-            ? "rgba(5,0,15,0.93)"
-            : "linear-gradient(180deg, rgba(5,0,15,0.95) 0%, rgba(5,0,15,0.7) 100%)",
+            ? `rgba(5,0,15,0.93)`
+            : `linear-gradient(180deg, rgba(5,0,15,0.82) 0%, rgba(5,0,15,0.65) 100%), url('https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/a7ffe2c9-815d-436d-9477-d82ab14d45d9.jpg') center/cover no-repeat`,
           backdropFilter: "blur(14px)",
           borderBottom: scrolled ? "1px solid rgba(180,0,255,0.3)" : "1px solid transparent",
           boxShadow: scrolled ? "0 0 40px rgba(180,0,255,0.18), 0 0 10px rgba(255,0,80,0.12)" : "none",
