@@ -52,8 +52,8 @@
 
   body {
     @apply bg-background text-foreground;
-    background-color: #1a0f2e;
-    color: #f0e8d8;
+    background-color: #0a0a0a;
+    color: #c8c8d4;
     font-family: "Cormorant", serif;
     font-size: 18px;
   }
@@ -70,7 +70,7 @@
 
 @layer utilities {
   .text-gradient-gold {
-    background: linear-gradient(135deg, #c9a227, #e8b84b, #c9a227);
+    background: linear-gradient(135deg, #a8851e, #d4a830, #a8851e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -104,10 +104,10 @@
   .card-rock {
     background: linear-gradient(
       135deg,
-      rgba(120, 80, 180, 0.12),
-      rgba(80, 40, 130, 0.08)
+      rgba(168, 133, 30, 0.08),
+      rgba(120, 90, 10, 0.05)
     );
-    border: 1px solid rgba(180, 140, 255, 0.15);
+    border: 1px solid rgba(168, 133, 30, 0.2);
     backdrop-filter: blur(10px);
   }
 
@@ -214,7 +214,7 @@
     font-size: 0.8rem;
     font-weight: 500;
     padding: 12px 32px;
-    background: linear-gradient(135deg, #c9a227, #e8b84b);
+    background: linear-gradient(135deg, #a8851e, #c49a30);
     color: #0a0a0a;
     border: none;
     transition: all 0.3s;
@@ -223,7 +223,7 @@
 
   .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4);
+    box-shadow: 0 8px 25px rgba(168, 133, 30, 0.4);
   }
 
   .section-title {
@@ -232,7 +232,7 @@
     font-style: italic;
     font-size: clamp(3rem, 7vw, 6rem);
     line-height: 1.1;
-    color: #f0e8d8;
+    color: #c8c8d4;
   }
 
   .section-eyebrow {
@@ -240,7 +240,7 @@
     font-size: 1.05rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #c9a227;
+    color: #a8851e;
   }
 
   .section-divider {

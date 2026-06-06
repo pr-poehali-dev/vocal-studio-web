@@ -30,7 +30,7 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#1a0f2e" }}>
+    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#0a0a0a" }}>
       <NavBar scrolled={scrolled} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <HeroAboutSections />
       <WaveDivider />

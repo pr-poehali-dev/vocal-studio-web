@@ -80,11 +80,11 @@ export default function CoursePage() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#1a0f2e" }}>
+    <div className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#0a0a0a" }}>
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center px-6 py-4"
-        style={{ background: "linear-gradient(180deg, rgba(10,5,20,0.97) 0%, transparent 100%)" }}>
+        style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.97) 0%, transparent 100%)" }}>
         <Link to="/" className="flex items-center gap-2 text-rock-ash hover:text-rock-gold transition-colors font-oswald tracking-widest text-sm uppercase">
           <Icon name="ChevronLeft" size={18} />
           На главную

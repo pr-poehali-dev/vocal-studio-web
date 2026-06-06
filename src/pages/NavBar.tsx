@@ -15,11 +15,11 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden"
         style={{
           background: scrolled
-            ? `rgba(5,0,15,0.93)`
-            : `linear-gradient(180deg, rgba(5,0,15,0.82) 0%, rgba(5,0,15,0.65) 100%), url('https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/663a6c29-9aba-4259-a4d1-73d44777b797.jpg') center top/cover no-repeat`,
+            ? `rgba(0,0,0,0.95)`
+            : `linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%), url('https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/663a6c29-9aba-4259-a4d1-73d44777b797.jpg') center top/cover no-repeat`,
           backdropFilter: "blur(14px)",
-          borderBottom: scrolled ? "1px solid rgba(180,0,255,0.3)" : "1px solid transparent",
-          boxShadow: scrolled ? "0 0 40px rgba(180,0,255,0.18), 0 0 10px rgba(255,0,80,0.12)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(139,26,42,0.5)" : "1px solid transparent",
+          boxShadow: scrolled ? "0 0 30px rgba(139,26,42,0.2)" : "none",
         }}
       >
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative" style={{ paddingBottom: "2.2rem" }}>

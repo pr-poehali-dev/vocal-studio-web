@@ -57,7 +57,7 @@ function GallerySection() {
       {lightbox !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
-          style={{ backgroundColor: "rgba(10,5,20,0.95)" }}
+          style={{ backgroundColor: "rgba(0,0,0,0.97)" }}
           onClick={() => setLightbox(null)}
         >
           <button
@@ -132,7 +132,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
       <WaveDivider />
 
       {/* COURSES */}
-      <section id="courses" className="py-28" style={{ backgroundColor: "#221440" }}>
+      <section id="courses" className="py-28" style={{ backgroundColor: "#111111" }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <p className="section-eyebrow mb-4">Программы</p>
@@ -296,7 +296,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
       <WaveDivider />
 
       {/* THERAPY */}
-      <section id="therapy" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
+      <section id="therapy" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#111111" }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl" style={{ backgroundColor: "rgba(123,79,191,0.1)" }} />
         </div>
@@ -337,7 +337,7 @@ export default function ContentSections({ formData, setFormData, formSent, handl
       <WaveDivider />
 
       {/* CONSULTATION */}
-      <section id="consultation" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
+      <section id="consultation" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#111111" }}>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-rock-gold/40 to-transparent" />
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(149,79,255,0.1) 0%, transparent 70%)" }} />
