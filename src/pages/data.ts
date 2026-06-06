@@ -7,7 +7,6 @@ export const NAV_ITEMS = [
   { label: "Много умных слов о главном", href: "#smart" },
   { label: "Видосы", href: "#videos" },
   { label: "Лечим музыкой", href: "#therapy" },
-  { label: "Они уже в деле", href: "#reviews" },
   { label: "В кадре", href: "#gallery" },
   { label: "Напиши мне", href: "#contacts" },
 ];

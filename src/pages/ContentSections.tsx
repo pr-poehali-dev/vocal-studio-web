@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { SoundWaveSVG } from "./HeroAboutSections";
-import { DIRECTIONS, COURSES, VIDEOS, REVIEWS, GALLERY, ARTICLES } from "./data";
+import { DIRECTIONS, COURSES, VIDEOS, GALLERY, ARTICLES } from "./data";
 import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 function WaveDivider() {
@@ -326,40 +326,6 @@ export default function ContentSections({ formData, setFormData, formSent, handl
             </div>
             <div className="absolute -top-3 -right-3 w-6 h-6 border border-rock-gold/30" />
             <div className="absolute -bottom-3 -left-3 w-4 h-4 border border-rock-red/30" />
-          </div>
-        </div>
-      </section>
-
-      <WaveDivider />
-
-      {/* REVIEWS */}
-      <section id="reviews" className="py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="section-eyebrow mb-4">Говорят ученики</p>
-            <h2 className="section-title">Они уже <em>в деле</em></h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {REVIEWS.map((review, i) => (
-              <div key={i} className="card-rock p-8 group hover:border-rock-gold/15 transition-all duration-300">
-                <div className="text-5xl text-rock-red/30 font-cormorant leading-none mb-4">"</div>
-                <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6 italic">
-                  {review.text}
-                </p>
-                <div className="flex items-center justify-between pt-5 border-t border-white/5">
-                  <div>
-                    <p className="font-oswald text-sm tracking-wide text-rock-light">{review.name}</p>
-                    <p className="font-cormorant text-rock-ash text-sm italic">{review.role}</p>
-                  </div>
-                  <div className="flex gap-1">
-                    {Array.from({ length: review.stars }).map((_, j) => (
-                      <span key={j} className="text-rock-gold text-sm">★</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
