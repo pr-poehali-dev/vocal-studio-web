@@ -33,7 +33,7 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
         style={{
           background: scrolled
             ? "rgba(8,8,8,0.96)"
-            : `linear-gradient(180deg, rgba(8,8,8,0.9) 0%, rgba(8,8,8,0.4) 100%), url('https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/663a6c29-9aba-4259-a4d1-73d44777b797.jpg') center top/cover no-repeat`,
+            : "rgba(8,8,8,0.75)",
           backdropFilter: scrolled ? "blur(20px)" : "blur(6px)",
           borderBottom: scrolled
             ? "1px solid rgba(201,168,76,0.15)"
