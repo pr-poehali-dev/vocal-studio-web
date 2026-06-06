@@ -90,7 +90,7 @@ export const COURSES = [
     price: "3 500 ₽",
     tag: "Курс",
     link: "/course/phonic-resonance",
-    cover: null,
+    cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/925eee55-630b-4abd-b9e6-97fbf885573c.png",
   },
   {
     level: "Книга",
