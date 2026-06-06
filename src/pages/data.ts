@@ -94,6 +94,7 @@ export const VIDEOS = [
 ];
 
 export const GALLERY = [
+  { src: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/663a6c29-9aba-4259-a4d1-73d44777b797.jpg", alt: "Сцена — микрофон, синтезатор, прожекторы" },
   { src: "https://cdn.poehali.dev/files/b29ca24e-d7f1-4596-b268-f20749b4aea9.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/e4d95bd6-d088-4474-9640-c82ecf77e13a.jpg", alt: "Анна Артман" },
   { src: "https://cdn.poehali.dev/files/819f2a44-667d-45aa-a43a-1995be147b24.jpg", alt: "Анна Артман" },
