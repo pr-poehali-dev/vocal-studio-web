@@ -211,7 +211,7 @@ export default function HeroAboutSections() {
           {/* Над-заголовок */}
           <div className="flex items-center justify-center gap-4 mb-10 animate-fade-in">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-rock-gold/60" />
-            <p className="section-eyebrow text-[0.65rem] tracking-[0.5em]">Театр Рока · Голосовой тренер</p>
+            <p className="section-eyebrow text-[0.85rem] tracking-[0.4em]">Голосовой тренер</p>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-rock-gold/60" />
           </div>
 
