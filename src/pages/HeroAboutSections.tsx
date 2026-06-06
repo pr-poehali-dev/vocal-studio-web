@@ -26,7 +26,7 @@ function SoundWaveSVG() {
       <path
         d="M0,40 Q20,10 40,40 Q60,70 80,40 Q100,10 120,40 Q140,70 160,40 Q180,10 200,40 Q220,70 240,40 Q260,10 280,40 Q300,70 320,40 Q340,10 360,40 Q380,70 400,40"
         fill="none"
-        stroke="#c41e3a"
+        stroke="#8b1a2a"
         strokeWidth="1.5"
       />
       <path
@@ -68,7 +68,7 @@ function StarField() {
       speed: Math.random() * 0.25 + 0.05,
       alpha: Math.random(),
       dAlpha: (Math.random() * 0.004 + 0.001) * (Math.random() > 0.5 ? 1 : -1),
-      color: Math.random() > 0.7 ? "#c9a227" : Math.random() > 0.5 ? "#c41e3a" : "#ffffff",
+      color: Math.random() > 0.7 ? "#a8851e" : Math.random() > 0.5 ? "#8b1a2a" : "#c0c0c8",
     }));
 
     const draw = () => {
@@ -149,9 +149,9 @@ function Equalizer() {
         const bw = barW * 0.7;
 
         const ratio = i / BAR_COUNT;
-        const r = Math.round(196 + (149 - 196) * ratio);
-        const g = Math.round(30 + (79 - 30) * ratio);
-        const b = Math.round(58 + (255 - 58) * ratio);
+        const r = Math.round(139 + (168 - 139) * ratio);
+        const g = Math.round(26 + (133 - 26) * ratio);
+        const b = Math.round(42 + (30 - 42) * ratio);
         const alpha = 0.18 + Math.abs(wave) * 0.35;
 
         ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
@@ -186,14 +186,14 @@ export default function HeroAboutSections() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%)" }} />
-          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(123,79,191,0.2) 0%, transparent 60%)" }} />
+          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(139,26,42,0.15) 0%, transparent 60%)" }} />
           <Equalizer />
         </div>
 
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
         <div className="absolute left-0 top-1/3 w-32 h-px bg-gradient-to-r from-transparent to-rock-gold/50" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(123,79,191,0.18) 0%, transparent 70%)", filter: "blur(40px)" }} />
-        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(100,50,180,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(168,133,30,0.1) 0%, transparent 70%)", filter: "blur(40px)" }} />
+        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(139,26,42,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24">
           <p className="section-eyebrow mt-8 mb-10 animate-fade-in text-center text-2xl tracking-widest w-full">Личный сайт голосового тренера Анны Артман</p>
@@ -206,7 +206,7 @@ export default function HeroAboutSections() {
                 fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
                 fontWeight: 900,
                 color: "#ffffff",
-                textShadow: "0 0 20px rgba(149,79,255,0.9), 0 0 50px rgba(149,79,255,0.6), 0 0 100px rgba(149,79,255,0.3)",
+                textShadow: "0 0 20px rgba(168,133,30,0.7), 0 0 50px rgba(168,133,30,0.4), 0 0 100px rgba(139,26,42,0.3)",
               }}>
               Анна Артман
             </h1>
@@ -312,9 +312,10 @@ export default function HeroAboutSections() {
               <img
                 src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG"
                 alt="Rock & Extreme Vocal Coach"
-                className="w-full object-contain glow-lilac"
+                className="w-full object-contain"
                 style={{
                   maxWidth: "120%",
+                  filter: "drop-shadow(0 0 30px rgba(168,133,30,0.25)) drop-shadow(0 0 60px rgba(139,26,42,0.15))",
                   maskImage: "radial-gradient(ellipse 80% 82% at 50% 50%, black 45%, transparent 100%)",
                   WebkitMaskImage: "radial-gradient(ellipse 80% 82% at 50% 50%, black 45%, transparent 100%)",
                 }}
