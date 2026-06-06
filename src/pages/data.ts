@@ -49,6 +49,8 @@ export const COURSES = [
     duration: "8 недель",
     price: "от 8 000 ₽/мес",
     tag: "Популярный",
+    link: null,
+    cover: null,
   },
   {
     level: "Продвинутый",
@@ -57,6 +59,8 @@ export const COURSES = [
     duration: "6 месяцев",
     price: "от 15 000 ₽/мес",
     tag: "Флагман",
+    link: null,
+    cover: null,
   },
   {
     level: "Авторская методика",
@@ -65,6 +69,8 @@ export const COURSES = [
     duration: "12 недель",
     price: "от 10 000 ₽/мес",
     tag: "Уникально",
+    link: null,
+    cover: null,
   },
   {
     level: "Терапия",
@@ -73,6 +79,28 @@ export const COURSES = [
     duration: "По запросу",
     price: "от 5 000 ₽/сессия",
     tag: "Лекции",
+    link: null,
+    cover: null,
+  },
+  {
+    level: "Онлайн-курс",
+    title: "Фонический резонанс",
+    desc: "Авторский курс по управлению резонаторами голоса. PDF-методичка и аудио-дорожки для самостоятельной практики — доступ навсегда после оплаты.",
+    duration: "Навсегда",
+    price: "3 500 ₽",
+    tag: "Курс",
+    link: "/course/phonic-resonance",
+    cover: null,
+  },
+  {
+    level: "Книга",
+    title: "Сила твоего голоса",
+    desc: "Как голос помогает лечить тело, снимать напряжение и восстанавливать энергию. Наука, практика и личный опыт в одном издании.",
+    duration: "PDF / Аудио / Бумага",
+    price: "от 800 ₽",
+    tag: "Книга",
+    link: "#book",
+    cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b967a556-ee5a-4b3a-a51c-8563f0ed9e12.png",
   },
 ];
 

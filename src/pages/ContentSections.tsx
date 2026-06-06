@@ -142,86 +142,39 @@ export default function ContentSections({ formData, setFormData, formSent, handl
 
           <div className="grid md:grid-cols-2 gap-6">
             {COURSES.map((course, i) => (
-              <div key={i} className="relative card-rock p-8 hover:border-rock-gold/20 transition-all duration-300 group">
-                <div className="flex items-start justify-between mb-5">
-                  <span className="font-oswald text-[10px] tracking-[0.25em] uppercase text-rock-ash">{course.level}</span>
-                  <span className="font-oswald text-[10px] tracking-widest uppercase px-3 py-1 bg-rock-red/20 text-rock-red border border-rock-red/30">
-                    {course.tag}
-                  </span>
+              <div key={i} className="relative card-rock p-8 hover:border-rock-gold/20 transition-all duration-300 group flex gap-5">
+                {course.cover && (
+                  <div className="flex-shrink-0 w-24">
+                    <img src={course.cover} alt={course.title} className="w-full object-cover shadow-lg" style={{ filter: "drop-shadow(0 4px 16px rgba(201,162,39,0.3))" }} />
+                  </div>
+                )}
+                <div className="flex-1 flex flex-col">
+                  <div className="flex items-start justify-between mb-5">
+                    <span className="font-oswald text-[10px] tracking-[0.25em] uppercase text-rock-ash">{course.level}</span>
+                    <span className="font-oswald text-[10px] tracking-widest uppercase px-3 py-1 bg-rock-red/20 text-rock-red border border-rock-red/30">
+                      {course.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-cormorant text-2xl font-semibold text-rock-light mb-3">
+                    {course.title}
+                  </h3>
+                  <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6" style={{ opacity: 0.85 }}>{course.desc}</p>
+                  <div className="flex items-center justify-between pt-5 border-t border-white/5 mt-auto">
+                    <div className="font-oswald text-xs tracking-widest uppercase text-rock-ash">{course.duration}</div>
+                    <div className="font-cormorant text-xl text-gradient-gold">{course.price}</div>
+                  </div>
+                  {course.link ? (
+                    <Link to={course.link.startsWith("/") ? course.link : course.link} className={`${course.link.startsWith("/") ? "btn-gold" : "btn-rock"} w-full text-center mt-5 block no-underline`}>
+                      Подробнее
+                    </Link>
+                  ) : (
+                    <a href="#consultation" className="btn-rock w-full text-center mt-5 block">
+                      Узнать подробнее
+                    </a>
+                  )}
                 </div>
-                <h3 className="font-cormorant text-2xl font-semibold text-rock-light mb-3">
-                  {course.title}
-                </h3>
-                <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6" style={{ opacity: 0.85 }}>{course.desc}</p>
-                <div className="flex items-center justify-between pt-5 border-t border-white/5">
-                  <div className="font-oswald text-xs tracking-widest uppercase text-rock-ash">{course.duration}</div>
-                  <div className="font-cormorant text-xl text-gradient-gold">{course.price}</div>
-                </div>
-                <a href="#consultation" className="btn-rock w-full text-center mt-5 block">
-                  Узнать подробнее
-                </a>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <WaveDivider />
-
-      {/* PHONIC RESONANCE COURSE */}
-      <section id="phonic-course" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#1a0f2e" }}>
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full blur-3xl" style={{ backgroundColor: "rgba(149,79,255,0.08)" }} />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="section-eyebrow mb-5">Онлайн-курс</p>
-              <h2 className="section-title mb-6">Фонический <em>резонанс</em></h2>
-              <p className="font-cormorant text-xl text-rock-light leading-relaxed mb-8" style={{ opacity: 0.85 }}>
-                Авторский курс по управлению резонаторами голоса. PDF-методичка и аудио-дорожки для самостоятельной практики — доступ навсегда после оплаты.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-10">
-                {["PDF-методичка", "Аудио-дорожки", "Доступ навсегда"].map((tag) => (
-                  <span key={tag} className="font-oswald text-xs tracking-widest uppercase px-4 py-2"
-                    style={{ border: "1px solid rgba(149,79,255,0.4)", color: "rgba(149,79,255,0.9)", background: "rgba(149,79,255,0.06)" }}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex items-center gap-6 mb-8">
-                <span className="font-oswald text-3xl text-rock-gold tracking-wide">3 500 ₽</span>
-                <span className="font-cormorant text-rock-ash text-lg">полный доступ</span>
-              </div>
-              <Link to="/course/phonic-resonance" className="btn-gold inline-flex items-center gap-3 text-lg px-10 py-4 no-underline">
-                <Icon name="BookOpen" size={20} />
-                Подробнее о курсе
-              </Link>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute -inset-6 rounded-sm blur-3xl opacity-20"
-                  style={{ background: "linear-gradient(135deg, rgba(149,79,255,0.6), rgba(201,162,39,0.4))" }} />
-                <div className="relative card-rock p-10 text-center"
-                  style={{ border: "1px solid rgba(149,79,255,0.25)" }}>
-                  <div className="text-7xl mb-6">🎵</div>
-                  <div className="font-oswald text-2xl text-rock-light tracking-widest uppercase mb-3">Фонический резонанс</div>
-                  <div className="w-16 h-px bg-rock-gold/50 mx-auto mb-6" />
-                  <div className="space-y-3 text-left">
-                    {["PDF-курс с теорией и упражнениями", "Аудио-дорожки для практики"].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <Icon name="Check" size={14} className="text-rock-gold flex-shrink-0" />
-                        <span className="font-cormorant text-rock-light text-base">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8 pt-6 border-t border-white/5">
-                    <div className="font-oswald text-rock-gold text-2xl">3 500 ₽</div>
-                    <div className="font-cormorant text-rock-ash text-sm mt-1">после оплаты — доступ сразу</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
