@@ -67,7 +67,7 @@ export const COURSES = [
     duration: "PDF / Аудио / Бумага",
     price: "от 800 ₽",
     tag: "Книга",
-    link: "#book",
+    link: "/book",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b967a556-ee5a-4b3a-a51c-8563f0ed9e12.png",
   },
 ];
