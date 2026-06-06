@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 const TELEGRAM_USERNAME = "ARTMANANDCO";
-const COURSE_PRICE = "2 000 ₽";
+const COURSE_PRICE = "2 900 ₽";
 
 const COURSE_CONTENTS = [
   { icon: "📄", label: "PDF-методичка курса", desc: "Полный материал с теорией и упражнениями" },
