@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
-import { SoundWaveSVG } from "./HeroAboutSections";
 import { DIRECTIONS, COURSES, VIDEOS, GALLERY, ARTICLES } from "./data";
 import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
@@ -372,79 +371,6 @@ export default function ContentSections({ formData, setFormData, formSent, handl
         </div>
       </section>
 
-      <div className="divider-rock" />
-
-      {/* CONTACTS */}
-      <section id="contacts" className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12 items-start">
-            <div className="md:col-span-1">
-              <p className="section-eyebrow mb-4">Контакты</p>
-              <h2 className="font-cormorant text-4xl font-light italic text-rock-light mb-6">
-                Будем на связи
-              </h2>
-              <div className="space-y-4">
-                {[
-                  { icon: "Instagram", label: "@artman_theatre", href: "#" },
-                  { icon: "MessageCircle", label: "Написать в Telegram", href: "#" },
-                  { icon: "Youtube", label: "YouTube-канал", href: "#" },
-                  { icon: "Mail", label: "anna@artman-studio.ru", href: "mailto:anna@artman-studio.ru" },
-                ].map((contact, i) => (
-                  <a
-                    key={i}
-                    href={contact.href}
-                    className="flex items-center gap-4 group text-rock-ash hover:text-rock-gold transition-colors"
-                  >
-                    <Icon name={contact.icon as "Mail"} size={16} className="text-rock-red group-hover:text-rock-gold transition-colors" />
-                    <span className="font-cormorant text-lg">{contact.label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-2 card-rock p-8">
-              <p className="font-oswald text-xs tracking-[0.3em] uppercase text-rock-gold mb-5">О тренере</p>
-              <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6">
-                «Театр Рока Артман & Ко» — онлайн и офлайн занятия. Москва,
-                принимаю учеников со всей России и из-за рубежа в онлайн-формате.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { label: "Режим работы", value: "Пн–Сб, 10:00–21:00" },
-                  { label: "Формат", value: "Онлайн / Офлайн" },
-                  { label: "Первый урок", value: "Бесплатная консультация" },
-                  { label: "Оплата", value: "Карта, перевод, рассрочка" },
-                ].map((info, i) => (
-                  <div key={i}>
-                    <p className="font-oswald text-[9px] tracking-[0.25em] uppercase text-rock-ash mb-1">{info.label}</p>
-                    <p className="font-cormorant text-rock-light text-base">{info.value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="py-8 border-t border-white/10" style={{ backgroundColor: "#140a24" }}>
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/766c35a9-598b-447d-8ef7-d7847646fb48.png"
-              alt="Artman"
-              className="h-8 w-auto object-contain opacity-80"
-            />
-            <span className="font-cormorant text-rock-ash text-sm">© 2024 Анна Артман. Все права защищены.</span>
-          </div>
-          <div className="flex items-center gap-3 opacity-30">
-            <SoundWaveSVG />
-          </div>
-          <a href="#consultation" className="btn-rock text-[10px] py-2 px-5">
-            Записаться на урок
-          </a>
-        </div>
-      </footer>
     </>
   );
 }
