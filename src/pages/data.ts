@@ -47,7 +47,7 @@ export const COURSES = [
     duration: "21 день",
     price: "2 000 ₽",
     tag: "Видео-курс",
-    link: null,
+    link: "/course/bear-ear",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/0d534d16-7a07-4977-a138-65a0a1934a91.png",
   },
   {
