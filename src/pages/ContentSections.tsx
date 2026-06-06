@@ -340,97 +340,35 @@ export default function ContentSections({ formData, setFormData, formSent, handl
       {/* CONSULTATION */}
       <section id="consultation" className="py-28 relative overflow-hidden" style={{ backgroundColor: "#221440" }}>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-rock-gold/40 to-transparent" />
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="section-eyebrow mb-4">Первый шаг</p>
-            <h2 className="section-title">Запись на <em>консультацию</em></h2>
-            <p className="font-cormorant text-rock-light text-xl mt-4" style={{ opacity: 0.8 }}>
-              Бесплатная 30-минутная консультация — разберём ваш запрос и подберём программу.
-            </p>
-          </div>
-
-          {formSent ? (
-            <div className="text-center card-rock p-12">
-              <div className="text-5xl mb-6">🎵</div>
-              <h3 className="font-cormorant text-2xl text-rock-gold mb-3">Заявка отправлена!</h3>
-              <p className="font-cormorant text-rock-ash text-lg">
-                Анна свяжется с вами в течение 24 часов. До встречи!
-              </p>
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(149,79,255,0.1) 0%, transparent 70%)" }} />
+        <div className="max-w-2xl mx-auto px-6 text-center relative z-10">
+          <p className="section-eyebrow mb-4">Первый шаг</p>
+          <h2 className="section-title mb-4">Запись на <em>консультацию</em></h2>
+          <p className="font-cormorant text-rock-light text-xl leading-relaxed mb-10" style={{ opacity: 0.8 }}>
+            Бесплатная 30-минутная консультация — разберём ваш запрос и подберём программу. Напишите нам в Telegram, и мы ответим быстро.
+          </p>
+          <button
+            onClick={() => {
+              const text = encodeURIComponent("Здравствуйте! Хочу записаться на консультацию.");
+              window.open(`https://t.me/ARTMANANDCO?text=${text}`, "_blank");
+            }}
+            className="btn-gold inline-flex items-center gap-3 text-xl px-12 py-5"
+          >
+            <Icon name="Send" size={22} />
+            Написать в Telegram
+          </button>
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/429fc65a-c09b-4fce-bc57-ee015a0e2c10.png"
+              alt="QR @ARTMANANDCO"
+              className="w-24 h-24 object-contain opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <div className="text-left">
+              <p className="font-oswald text-rock-gold tracking-widest text-sm uppercase">@ARTMANANDCO</p>
+              <p className="font-cormorant text-rock-ash text-base mt-1">или отсканируй QR-код</p>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-5">
-                <div>
-                  <label className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash block mb-2">
-                    Ваше имя *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={e => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-transparent border border-white/10 px-4 py-3 font-cormorant text-rock-light text-base focus:outline-none focus:border-rock-gold/50 transition-colors placeholder:text-rock-ash/40"
-                    placeholder="Анна"
-                  />
-                </div>
-                <div>
-                  <label className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash block mb-2">
-                    Телефон *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-transparent border border-white/10 px-4 py-3 font-cormorant text-rock-light text-base focus:outline-none focus:border-rock-gold/50 transition-colors placeholder:text-rock-ash/40"
-                    placeholder="+7 (___) ___-__-__"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash block mb-2">
-                  Направление обучения
-                </label>
-                <select
-                  value={formData.direction}
-                  onChange={e => setFormData({ ...formData, direction: e.target.value })}
-                  className="w-full border border-white/10 px-4 py-3 font-cormorant text-rock-light text-base focus:outline-none focus:border-rock-gold/50 transition-colors" style={{ backgroundColor: "rgba(123,79,191,0.15)" }}
-                >
-                  <option value="">Выбрать направление...</option>
-                  <option>Рок и экстрим вокал</option>
-                  <option>Горловое пение</option>
-                  <option>Эстрадный вокал</option>
-                  <option>Музыкотерапия</option>
-                  <option>Фонопедия</option>
-                  <option>Сонграйтинг</option>
-                  <option>Методика «Чем он это сделал»</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash block mb-2">
-                  Расскажите о себе
-                </label>
-                <textarea
-                  rows={4}
-                  value={formData.message}
-                  onChange={e => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-transparent border border-white/10 px-4 py-3 font-cormorant text-rock-light text-base focus:outline-none focus:border-rock-gold/50 transition-colors resize-none placeholder:text-rock-ash/40"
-                  placeholder="Ваш опыт, цели, вопросы..."
-                />
-              </div>
-
-              <button type="submit" className="btn-gold w-full text-base py-4">
-                Отправить заявку
-              </button>
-
-              <p className="font-cormorant text-rock-ash text-sm text-center">
-                Или напишите напрямую:{" "}
-                <a href="#contacts" className="text-rock-gold hover:underline">в мессенджерах</a>
-              </p>
-            </form>
-          )}
+          </div>
         </div>
       </section>
 
