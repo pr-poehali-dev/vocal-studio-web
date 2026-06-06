@@ -87,7 +87,7 @@ export const COURSES = [
     title: "Фонический резонанс",
     desc: "Авторский курс по управлению резонаторами голоса. PDF-методичка и аудио-дорожки для самостоятельной практики — доступ навсегда после оплаты.",
     duration: "Навсегда",
-    price: "3 500 ₽",
+    price: "2 000 ₽",
     tag: "Курс",
     link: "/course/phonic-resonance",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/925eee55-630b-4abd-b9e6-97fbf885573c.png",
