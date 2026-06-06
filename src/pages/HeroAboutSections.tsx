@@ -184,138 +184,193 @@ export default function HeroAboutSections() {
     <>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%)" }} />
-          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 70% 50%, rgba(139,26,42,0.15) 0%, transparent 60%)" }} />
-          <Equalizer />
+
+        {/* Фон */}
+        <div className="absolute inset-0 bg-[#080808]" />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 120% 80% at 60% 40%, rgba(122,21,37,0.18) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 80% 60% at 20% 70%, rgba(201,168,76,0.07) 0%, transparent 50%)" }} />
+        <Equalizer />
+
+        {/* Декоративные линии */}
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.5) 50%, transparent)" }} />
+        <div className="absolute top-0 right-0 w-px h-full" style={{ background: "linear-gradient(180deg, transparent, rgba(201,168,76,0.2) 30%, rgba(122,21,37,0.3) 70%, transparent)" }} />
+        <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(122,21,37,0.5) 50%, transparent)" }} />
+
+        {/* Угловые акценты */}
+        <div className="absolute top-28 left-6 w-16 h-16 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-px bg-rock-gold/40" />
+          <div className="absolute top-0 left-0 w-px h-full bg-rock-gold/40" />
+        </div>
+        <div className="absolute top-28 right-6 w-16 h-16 pointer-events-none">
+          <div className="absolute top-0 right-0 w-full h-px bg-rock-gold/40" />
+          <div className="absolute top-0 right-0 w-px h-full bg-rock-gold/40" />
         </div>
 
-        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-rock-red/30 to-transparent" />
-        <div className="absolute left-0 top-1/3 w-32 h-px bg-gradient-to-r from-transparent to-rock-gold/50" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(168,133,30,0.1) 0%, transparent 70%)", filter: "blur(40px)" }} />
-        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(139,26,42,0.12) 0%, transparent 70%)", filter: "blur(30px)" }} />
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24">
-          <p className="section-eyebrow mt-8 mb-10 animate-fade-in text-center text-2xl tracking-widest w-full">Личный сайт голосового тренера Анны Артман</p>
-          <div className="flex items-center gap-12">
-          <div className="flex-1 min-w-0">
+          {/* Над-заголовок */}
+          <div className="flex items-center justify-center gap-4 mb-10 animate-fade-in">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-rock-gold/60" />
+            <p className="section-eyebrow text-[0.65rem] tracking-[0.5em]">Театр Рока · Голосовой тренер</p>
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-rock-gold/60" />
+          </div>
 
-            <h1 className="leading-[0.95] mb-6 animate-fade-in scroll-delay-1 uppercase tracking-tight"
-              style={{
-                fontSize: "clamp(3.5rem, 9vw, 7rem)",
-                fontFamily: "'Arial Black', 'Arial Bold', Arial, sans-serif",
-                fontWeight: 900,
-                color: "#ffffff",
-                textShadow: "0 0 20px rgba(168,133,30,0.7), 0 0 50px rgba(168,133,30,0.4), 0 0 100px rgba(139,26,42,0.3)",
+          <div className="flex items-end gap-8 lg:gap-16">
+
+            {/* Текст */}
+            <div className="flex-1 min-w-0">
+
+              <h1 className="animate-fade-in scroll-delay-1 mb-2" style={{
+                fontSize: "clamp(4rem, 10vw, 8.5rem)",
+                fontFamily: "Cormorant, serif",
+                fontWeight: 300,
+                fontStyle: "italic",
+                lineHeight: 0.9,
+                color: "#f0ece4",
+                letterSpacing: "-0.02em",
               }}>
-              Анна Артман
-            </h1>
+                Анна
+              </h1>
+              <h1 className="animate-fade-in scroll-delay-2 mb-8" style={{
+                fontSize: "clamp(4rem, 10vw, 8.5rem)",
+                fontFamily: "'Arial Black', Arial, sans-serif",
+                fontWeight: 900,
+                lineHeight: 0.9,
+                letterSpacing: "-0.03em",
+                background: "linear-gradient(135deg, #8a6820 0%, #c9a84c 35%, #f0d878 55%, #c9a84c 75%, #8a6820 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                backgroundSize: "200% auto",
+                animation: "shimmer-gold 5s linear infinite",
+              }}>
+                АРТМАН
+              </h1>
 
-            <div className="flex flex-wrap gap-3 mb-8 animate-fade-in scroll-delay-2">
-              {["Тренер по рок и экстрим вокалу", "Тренер по обертональному звучанию", "Тренер по эстрадно-джазовому вокалу", "Фонопед", "Муз. психотерапевт", "Сонграйтер", "Вокальный стилист"].map((tag) => (
-                <span key={tag} className="font-oswald text-[10px] tracking-[0.2em] uppercase px-3 py-1 border border-white/15 text-rock-ash">
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <p className="font-cormorant text-2xl text-rock-light leading-relaxed mb-10 max-w-xl animate-fade-in scroll-delay-3" style={{ opacity: 0.85 }}>
-              Автор методики{" "}
-              <em className="text-rock-gold">"Чем он это сделал"</em>.{" "}
-              Основатель студии <em className="text-rock-light">«Театр Рока Артман & Ко»</em>.
-              Превращаю голос в инструмент — мощный, живой, неповторимый.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mb-12 animate-fade-in scroll-delay-4">
-              <a href="#courses" className="btn-gold">Смотреть мастер-классы</a>
-              <a href="#consultation" className="btn-rock">Записаться на консультацию</a>
-            </div>
-
-            <div className="animate-fade-in scroll-delay-5">
-              <WaveVisualizer />
-            </div>
-
-            <div className="mt-6 animate-fade-in scroll-delay-5" style={{ opacity: 0.75 }}>
-              <AnimatedWaveCanvas height={52} />
-            </div>
-          </div>
-
-          <div className="hidden lg:block flex-shrink-0 w-[420px] animate-fade-in scroll-delay-2" style={{ marginBottom: "-2rem" }}>
-            <img
-              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/24816572-50fa-4d7b-a522-fb859536e950.jpg"
-              alt="Анна Артман"
-              className="w-full object-contain"
-              style={{
-                maskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 75%, transparent 100%)",
-                filter: "drop-shadow(0 0 40px rgba(196,30,58,0.25))",
-              }}
-            />
-          </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0">
-          <SoundWaveSVG />
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section id="about" className="relative overflow-hidden py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="section-eyebrow mb-4">Личное дело</p>
-              <h2 className="section-title mb-8 line-gold glow-lilac-text">
-                Дорогой друг!
-              </h2>
-              <div className="space-y-5 text-rock-light font-cormorant text-xl leading-relaxed" style={{ opacity: 0.88 }}>
-                <p>
-                  🦔 Я Анна Артман — тренер ГОЛОСА И МОЗГА, специалист по всем видам экстремальных техник вокала, горловому и обертональному пению, джазовым стандартам и современному эстрадному вокалу в целом, который включает сейчас в себя все существующие техники и стили.
+              <div className="flex items-center gap-4 mb-8 animate-fade-in scroll-delay-2">
+                <div className="h-px flex-1 max-w-[60px]" style={{ background: "linear-gradient(90deg, #c9a84c, transparent)" }} />
+                <p className="font-cormorant text-lg italic" style={{ color: "rgba(201,168,76,0.7)" }}>
+                  Голос — это не инструмент. Это ты сам.
                 </p>
-                <p>
-                  🦔 У меня три профильных высших образования: филологическое, режиссёрское и музыкальное. А также квалификации фонопеда и музыкального психотерапевта. Но когда работаешь с голосом, этого не достаточно.
-                </p>
-                <p>
-                  🎼 Мной изучены методики CVT, EVT, SLS и BVT (самая любимая), на основе которых я разработала собственную методику <span className="text-rock-gold italic">«Чем он это сделал»</span>. Могу разобрать, показать, объяснить анатомически и физиологически любой вокальный выкрутас любого вокалиста.
-                </p>
-                <p>
-                  🦔 Я не добрый и мягкий педагог! Ругаюсь, бывает крепко! Могу гонять до мокрых трусов (в буквальном смысле). Но стараюсь каждому дать столько, сколько он может взять. Я прошла сама через кучу педагогов и точно знаю — всех учить нужно по-разному.
-                </p>
-                <p>
-                  Открыта для диалога. Закрыта для сессионных выступлений в кабаках. Постоянно совершенствую свою методику! 🏴‍☠️ Расширяю постепенно географию — работаю онлайн.
-                </p>
-                <p>
-                  🧠 Для некоторых учеников я скорее психолог, чем тренер по вокалу (голос — часть нашей ЦНС). С кем-то делаю акцент на актёрскую подготовку.
-                </p>
-                <p className="text-rock-gold italic">
-                  НЕ учу петь — учу пользоваться своим аппаратом: механикой (голосовой тракт и мускулатура гортани) и электроникой (головной мозг).
-                </p>
-                <p>Ваша Артман! ❤️</p>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 mt-10">
-                {[
-                  { num: "20+", label: "лет практики" },
-                  { num: "500+", label: "учеников" },
-                  { num: "6", label: "направлений" },
-                ].map((stat) => (
-                  <div key={stat.label} className="border-t border-rock-red/30 pt-4">
-                    <div className="font-cormorant text-3xl font-semibold text-gradient-gold">{stat.num}</div>
-                    <div className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-1">{stat.label}</div>
+              <div className="flex flex-wrap gap-2 mb-10 animate-fade-in scroll-delay-3">
+                {["Рок & экстрим вокал", "Горловое пение", "Фонопедия", "Муз. психотерапия", "Сонграйтинг"].map((tag) => (
+                  <span key={tag} className="font-oswald text-[9px] tracking-[0.25em] uppercase px-3 py-1.5"
+                    style={{ border: "1px solid rgba(201,168,76,0.2)", color: "rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)" }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p className="font-cormorant text-xl leading-relaxed mb-10 max-w-lg animate-fade-in scroll-delay-3"
+                style={{ color: "rgba(208,208,220,0.8)" }}>
+                Автор методики <em style={{ color: "#c9a84c" }}>"Чем он это сделал"</em>.
+                Основатель студии <em style={{ color: "#d0d0dc" }}>«Театр Рока Артман & Ко»</em>.
+                Превращаю голос в инструмент — мощный, живой, неповторимый.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-10 animate-fade-in scroll-delay-4">
+                <a href="#courses" className="btn-gold">Мастер-классы</a>
+                <a href="#consultation" className="btn-rock">Записаться</a>
+              </div>
+
+              {/* Статы */}
+              <div className="flex gap-10 animate-fade-in scroll-delay-5">
+                {[{ num: "20+", label: "лет" }, { num: "500+", label: "учеников" }, { num: "6", label: "направлений" }].map((s) => (
+                  <div key={s.label}>
+                    <div className="font-cormorant font-semibold text-3xl text-gradient-gold">{s.num}</div>
+                    <div className="font-oswald text-[9px] tracking-[0.3em] uppercase mt-1" style={{ color: "rgba(208,208,220,0.4)" }}>{s.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="flex justify-center items-center" style={{ margin: "-4rem -2rem" }}>
+            {/* Фото */}
+            <div className="hidden lg:block flex-shrink-0 w-[400px] relative animate-fade-in scroll-delay-2" style={{ marginBottom: "-4rem" }}>
+              <div className="absolute -inset-4 pointer-events-none"
+                style={{ background: "radial-gradient(ellipse at 50% 60%, rgba(201,168,76,0.12) 0%, transparent 70%)" }} />
+              <img
+                src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/24816572-50fa-4d7b-a522-fb859536e950.jpg"
+                alt="Анна Артман"
+                className="w-full object-contain relative z-10"
+                style={{
+                  maskImage: "linear-gradient(to bottom, transparent 0%, black 10%, black 80%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 10%, black 80%, transparent 100%)",
+                  filter: "contrast(1.05) brightness(0.95) drop-shadow(0 0 60px rgba(122,21,37,0.4))",
+                }}
+              />
+              {/* Золотая рамка-акцент */}
+              <div className="absolute bottom-16 -left-4 w-8 h-8 pointer-events-none z-20">
+                <div className="absolute bottom-0 left-0 w-full h-px bg-rock-gold/50" />
+                <div className="absolute bottom-0 left-0 w-px h-full bg-rock-gold/50" />
+              </div>
+              <div className="absolute top-12 -right-4 w-8 h-8 pointer-events-none z-20">
+                <div className="absolute top-0 right-0 w-full h-px bg-rock-gold/50" />
+                <div className="absolute top-0 right-0 w-px h-full bg-rock-gold/50" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Скролл-хинт */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in scroll-delay-5">
+          <div className="w-px h-10 bg-gradient-to-b from-rock-gold/50 to-transparent" />
+          <span className="font-oswald text-[8px] tracking-[0.4em] uppercase" style={{ color: "rgba(201,168,76,0.4)" }}>scroll</span>
+        </div>
+      </section>
+
+      {/* ── РАЗДЕЛИТЕЛЬ ── */}
+      <div className="divider-gold" />
+
+      {/* ABOUT */}
+      <section id="about" className="relative overflow-hidden py-28" style={{ backgroundColor: "#080808" }}>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute right-0 top-0 w-[600px] h-[600px]" style={{ background: "radial-gradient(circle at 100% 0%, rgba(201,168,76,0.05) 0%, transparent 60%)" }} />
+          <div className="absolute left-0 bottom-0 w-[400px] h-[400px]" style={{ background: "radial-gradient(circle at 0% 100%, rgba(122,21,37,0.07) 0%, transparent 60%)" }} />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-px bg-rock-gold/60" />
+                <p className="section-eyebrow">Личное дело</p>
+              </div>
+              <h2 className="section-title mb-10 line-gold" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
+                Дорогой <em>друг!</em>
+              </h2>
+              <div className="space-y-5 font-cormorant text-lg leading-relaxed" style={{ color: "rgba(208,208,220,0.82)" }}>
+                <p>🦔 Я Анна Артман — тренер ГОЛОСА И МОЗГА, специалист по всем видам экстремальных техник вокала, горловому и обертональному пению, джазовым стандартам и современному эстрадному вокалу в целом.</p>
+                <p>🦔 У меня три профильных высших образования: филологическое, режиссёрское и музыкальное. А также квалификации фонопеда и музыкального психотерапевта.</p>
+                <p>🎼 Мной изучены методики CVT, EVT, SLS и BVT, на основе которых я разработала собственную методику <span style={{ color: "#c9a84c" }} className="italic">«Чем он это сделал»</span>.</p>
+                <p>🦔 Я не добрый и мягкий педагог! Ругаюсь, бывает крепко! Могу гонять до мокрых трусов. Но стараюсь каждому дать столько, сколько он может взять.</p>
+                <p style={{ color: "#c9a84c" }} className="italic font-semibold">
+                  НЕ учу петь — учу пользоваться своим аппаратом: механикой и электроникой (головной мозг).
+                </p>
+                <p>Ваша Артман! ❤️</p>
+              </div>
+
+              <div className="grid grid-cols-3 gap-6 mt-12 pt-10" style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}>
+                {[{ num: "20+", label: "лет практики" }, { num: "500+", label: "учеников" }, { num: "6", label: "направлений" }].map((stat) => (
+                  <div key={stat.label}>
+                    <div className="font-cormorant text-4xl font-semibold text-gradient-gold mb-1">{stat.num}</div>
+                    <div className="font-oswald text-[9px] tracking-[0.3em] uppercase" style={{ color: "rgba(201,168,76,0.45)" }}>{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center relative" style={{ margin: "-4rem -2rem" }}>
+              <div className="absolute inset-0 pointer-events-none" style={{
+                background: "radial-gradient(ellipse 70% 70% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)"
+              }} />
               <img
                 src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/37875366-5357-467d-8608-88ccaf3906ed.JPG"
                 alt="Rock & Extreme Vocal Coach"
-                className="w-full object-contain"
+                className="w-full object-contain relative z-10"
                 style={{
                   maxWidth: "120%",
-                  filter: "drop-shadow(0 0 30px rgba(168,133,30,0.25)) drop-shadow(0 0 60px rgba(139,26,42,0.15))",
+                  filter: "contrast(1.05) sepia(0.1) drop-shadow(0 0 40px rgba(201,168,76,0.15)) drop-shadow(0 0 80px rgba(122,21,37,0.15))",
                   maskImage: "radial-gradient(ellipse 80% 82% at 50% 50%, black 45%, transparent 100%)",
                   WebkitMaskImage: "radial-gradient(ellipse 80% 82% at 50% 50%, black 45%, transparent 100%)",
                 }}

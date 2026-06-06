@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 import { NAV_ITEMS } from "./data";
-import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 interface NavBarProps {
   scrolled: boolean;
@@ -9,93 +9,146 @@ interface NavBarProps {
 }
 
 export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps) {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const handler = () => {
+      const sections = NAV_ITEMS.map(i => i.href.replace("#", ""));
+      for (const id of sections.reverse()) {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 120) {
+          setActiveSection(id);
+          return;
+        }
+      }
+    };
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-700"
         style={{
           background: scrolled
-            ? `rgba(0,0,0,0.95)`
-            : `linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%), url('https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/663a6c29-9aba-4259-a4d1-73d44777b797.jpg') center top/cover no-repeat`,
-          backdropFilter: "blur(14px)",
-          borderBottom: scrolled ? "1px solid rgba(139,26,42,0.5)" : "1px solid transparent",
-          boxShadow: scrolled ? "0 0 30px rgba(139,26,42,0.2)" : "none",
+            ? "rgba(8,8,8,0.96)"
+            : `linear-gradient(180deg, rgba(8,8,8,0.9) 0%, rgba(8,8,8,0.4) 100%), url('https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/files/663a6c29-9aba-4259-a4d1-73d44777b797.jpg') center top/cover no-repeat`,
+          backdropFilter: scrolled ? "blur(20px)" : "blur(6px)",
+          borderBottom: scrolled
+            ? "1px solid rgba(201,168,76,0.15)"
+            : "1px solid transparent",
+          boxShadow: scrolled
+            ? "0 1px 0 rgba(201,168,76,0.08), 0 8px 32px rgba(0,0,0,0.6)"
+            : "none",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative" style={{ paddingBottom: "2.2rem" }}>
-          <a href="#" className="flex items-center select-none">
+        {/* Верхняя золотая линия */}
+        {scrolled && (
+          <div className="absolute top-0 left-0 right-0 h-px"
+            style={{ background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.5) 50%, transparent)" }} />
+        )}
+
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+          {/* Лого */}
+          <a href="#" className="flex items-center select-none group">
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/766c35a9-598b-447d-8ef7-d7847646fb48.png"
               alt="Artman"
-              className="h-28 w-auto object-contain"
+              className="h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
               style={{
-                filter: "brightness(1.3) drop-shadow(0 0 12px rgba(255,0,80,0.6)) drop-shadow(0 0 24px rgba(180,0,255,0.4))",
+                filter: "brightness(1.1) contrast(1.1) drop-shadow(0 0 12px rgba(201,168,76,0.4))",
                 mixBlendMode: "screen",
               }}
             />
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            {NAV_ITEMS.map((item) => (
+          {/* Навигация */}
+          <div className="hidden lg:flex items-center gap-7">
+            {NAV_ITEMS.map((item) => {
+              const id = item.href.replace("#", "");
+              const isActive = activeSection === id;
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="relative font-oswald text-[10px] tracking-[0.2em] uppercase transition-all duration-300"
+                  style={{
+                    color: isActive ? "#c9a84c" : "rgba(208,208,220,0.5)",
+                  }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = "#c9a84c"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = isActive ? "#c9a84c" : "rgba(208,208,220,0.5)"; }}
+                >
+                  {item.label}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-px"
+                      style={{ background: "linear-gradient(90deg, transparent, #c9a84c, transparent)" }} />
+                  )}
+                </a>
+              );
+            })}
+            <a href="#consultation" className="btn-gold ml-4 text-[9px] py-2.5 px-5">
+              Записаться
+            </a>
+          </div>
+
+          {/* Бургер */}
+          <button
+            className="lg:hidden transition-all duration-300 p-1"
+            style={{ color: "rgba(201,168,76,0.8)" }}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <Icon name={menuOpen ? "X" : "Menu"} size={22} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Мобильное меню */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 z-40 lg:hidden flex flex-col"
+          style={{ background: "rgba(8,8,8,0.98)", backdropFilter: "blur(20px)" }}
+        >
+          <div className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(122,21,37,0.15) 0%, transparent 60%)" }} />
+
+          <div className="flex items-center justify-between px-6 py-4 relative z-10"
+            style={{ borderBottom: "1px solid rgba(201,168,76,0.12)" }}>
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/766c35a9-598b-447d-8ef7-d7847646fb48.png"
+              alt="Artman" className="h-14 w-auto object-contain" style={{ filter: "brightness(1.1) drop-shadow(0 0 8px rgba(201,168,76,0.4))", mixBlendMode: "screen" }}
+            />
+            <button onClick={() => setMenuOpen(false)} style={{ color: "rgba(201,168,76,0.7)" }}>
+              <Icon name="X" size={22} />
+            </button>
+          </div>
+
+          <div className="flex-1 flex flex-col justify-center px-8 gap-1 relative z-10">
+            {NAV_ITEMS.map((item, i) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium tracking-wide transition-all duration-300"
+                className="font-cormorant text-2xl italic py-3 transition-all duration-300 hover:pl-4"
                 style={{
-                  color: "rgba(220,200,255,0.85)",
-                  textShadow: "0 0 8px rgba(180,0,255,0.4)",
+                  color: "rgba(208,208,220,0.7)",
+                  borderBottom: "1px solid rgba(201,168,76,0.06)",
+                  animationDelay: `${i * 0.05}s`,
                 }}
-                onMouseEnter={e => {
-                  (e.target as HTMLElement).style.color = "#ff0055";
-                  (e.target as HTMLElement).style.textShadow = "0 0 12px rgba(255,0,85,0.8), 0 0 24px rgba(255,0,85,0.4)";
-                }}
-                onMouseLeave={e => {
-                  (e.target as HTMLElement).style.color = "rgba(220,200,255,0.85)";
-                  (e.target as HTMLElement).style.textShadow = "0 0 8px rgba(180,0,255,0.4)";
-                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = "#c9a84c"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = "rgba(208,208,220,0.7)"; }}
+                onClick={() => setMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          <button
-            className="md:hidden transition-all duration-300"
-            style={{ color: "rgba(220,200,255,0.9)", filter: "drop-shadow(0 0 6px rgba(180,0,255,0.6))" }}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <Icon name={menuOpen ? "X" : "Menu"} size={24} />
-          </button>
-        </div>
-
-        <AnimatedWaveCanvas height={36} className="absolute bottom-0 left-0 right-0" />
-      </nav>
-
-      {menuOpen && (
-        <div
-          className="fixed top-0 left-0 right-0 z-40 md:hidden px-6 flex flex-col gap-5"
-          style={{
-            background: "rgba(5,0,15,0.97)",
-            borderTop: "1px solid rgba(180,0,255,0.3)",
-            boxShadow: "0 8px 32px rgba(180,0,255,0.2)",
-            paddingTop: "9rem",
-            paddingBottom: "1.5rem",
-          }}
-        >
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium tracking-wide transition-all duration-300"
-              style={{
-                color: "rgba(220,200,255,0.85)",
-                textShadow: "0 0 8px rgba(180,0,255,0.4)",
-              }}
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
+          <div className="px-8 pb-10 relative z-10">
+            <a href="#consultation" className="btn-gold w-full text-center block py-4" onClick={() => setMenuOpen(false)}>
+              Записаться на консультацию
             </a>
-          ))}
+          </div>
         </div>
       )}
     </>
