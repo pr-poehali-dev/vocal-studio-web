@@ -35,9 +35,7 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
             ? "rgba(8,8,8,0.96)"
             : "rgba(8,8,8,0.75)",
           backdropFilter: scrolled ? "blur(20px)" : "blur(6px)",
-          borderBottom: scrolled
-            ? "1px solid rgba(201,168,76,0.15)"
-            : "1px solid transparent",
+          borderBottom: "1px solid rgba(201,168,76,0.12)",
           boxShadow: scrolled
             ? "0 1px 0 rgba(201,168,76,0.08), 0 8px 32px rgba(0,0,0,0.6)"
             : "none",
