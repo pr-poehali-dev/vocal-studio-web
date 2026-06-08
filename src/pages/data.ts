@@ -23,7 +23,7 @@ export const BOOK = {
   ],
   cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b967a556-ee5a-4b3a-a51c-8563f0ed9e12.png",
   formats: [
-    { type: "Электронная", icon: "📱", price: "800 ₽", desc: "PDF + EPUB, читай сразу после оплаты" },
+    { type: "Электронная", icon: "📱", price: "500 ₽", desc: "PDF + EPUB, читай сразу после оплаты" },
     { type: "Аудиокнига", icon: "🎧", price: "1 000 ₽", desc: "MP3, слушай в любом месте и в любое время" },
     { type: "Бумажная", icon: "📖", price: "1 500 ₽", desc: "С доставкой по России" },
   ],
@@ -64,7 +64,7 @@ export const COURSES = [
     title: "Сила твоего голоса",
     desc: "Как голос помогает лечить тело, снимать напряжение и восстанавливать энергию. Наука, практика и личный опыт в одном издании.",
     duration: "PDF / Аудио / Бумага",
-    price: "от 800 ₽",
+    price: "от 500 ₽",
     tag: "Книга",
     link: "/book",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b967a556-ee5a-4b3a-a51c-8563f0ed9e12.png",
