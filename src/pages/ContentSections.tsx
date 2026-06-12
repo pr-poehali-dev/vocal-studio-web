@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
-import { DIRECTIONS, COURSES, VIDEOS, GALLERY, ARTICLES } from "./data";
+import { DIRECTIONS, COURSES, GALLERY, ARTICLES } from "./data";
 import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 function WaveDivider() {
@@ -214,82 +214,6 @@ export default function ContentSections({ formData, setFormData, formSent, handl
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <WaveDivider />
-
-      {/* VIDEO LIBRARY */}
-      <section id="videos" className="py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16">
-            <p className="section-eyebrow mb-4">Полезно и интересно</p>
-            <h2 className="section-title"><em>Видосы</em></h2>
-            <div className="flex flex-wrap gap-3 mt-6">
-              {["Поёт тренер", "Поют ученики", "Полезные видосики"].map((tab) => (
-                <span key={tab} className="font-oswald text-[10px] tracking-[0.2em] uppercase px-4 py-2 border border-white/15 text-rock-ash">
-                  {tab}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {VIDEOS.map((video, i) => (
-              <div key={i} className="card-rock group cursor-pointer hover:border-rock-red/25 transition-all duration-300">
-                <div className="aspect-video relative overflow-hidden bg-rock-smoke flex items-center justify-center">
-                  {video.locked ? (
-                    <div className="flex flex-col items-center gap-2 text-rock-ash">
-                      <Icon name="Lock" size={32} className="text-rock-gold opacity-60" />
-                      <span className="font-oswald text-xs tracking-widest uppercase opacity-60">Только для учеников</span>
-                    </div>
-                  ) : video.youtubeId ? (
-                    <iframe
-                      className="absolute inset-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="w-14 h-14 rounded-full border-2 border-rock-red flex items-center justify-center group-hover:bg-rock-red/20 transition-all">
-                        <Icon name="Play" size={20} className="text-rock-light ml-1" />
-                      </div>
-                      <span className="font-oswald text-xs tracking-widest uppercase text-rock-gold">Смотреть</span>
-                    </div>
-                  )}
-                  {!video.youtubeId && (
-                    <div className="absolute top-3 left-3">
-                      <span className="font-oswald text-[9px] tracking-widest uppercase px-2 py-1 bg-black/60 text-rock-ash border border-white/10">
-                        {video.category}
-                      </span>
-                    </div>
-                  )}
-                  {!video.locked && !video.youtubeId && video.duration && (
-                    <div className="absolute bottom-3 right-3">
-                      <span className="font-oswald text-[9px] px-2 py-1 bg-black/60 text-rock-ash">
-                        {video.duration}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <div className="p-5">
-                  <h3 className="font-cormorant text-base text-rock-light group-hover:text-rock-gold transition-colors leading-snug mb-2">
-                    {video.title}
-                  </h3>
-                  <div className="flex items-center gap-2 text-rock-ash">
-                    <Icon name="Eye" size={12} />
-                    <span className="font-oswald text-[10px] tracking-wide">{video.views} просмотров</span>
-                  </div>
-                  {video.category === "Поёт тренер" && (
-                    <p className="font-oswald text-[11px] tracking-widest uppercase text-rock-gold mt-2">Артман звучит</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
         </div>
       </section>
 
