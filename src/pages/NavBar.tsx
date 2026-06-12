@@ -54,7 +54,7 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/766c35a9-598b-447d-8ef7-d7847646fb48.png"
               alt="Artman"
-              className="h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-28 w-auto object-contain transition-all duration-500 group-hover:scale-105"
               style={{
                 filter: "brightness(1.1) contrast(1.1) drop-shadow(0 0 12px rgba(201,168,76,0.4))",
                 mixBlendMode: "screen",
