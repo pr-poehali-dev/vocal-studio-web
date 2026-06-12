@@ -8,7 +8,6 @@ export const NAV_ITEMS = [
   { label: "Видосы", href: "#videos" },
   { label: "Лечим музыкой", href: "#therapy" },
   { label: "В кадре", href: "#gallery" },
-  { label: "Напиши мне", href: "#contacts" },
 ];
 
 export const BOOK = {
