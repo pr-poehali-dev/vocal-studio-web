@@ -74,7 +74,7 @@ export default function BookPage() {
               <p className="section-eyebrow mb-3">Форматы</p>
               <h2 className="section-title">Выбери <em>свой</em></h2>
             </div>
-            <div className="grid sm:grid-cols-3 gap-5">
+            <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
               {BOOK.formats.map((fmt, i) => (
                 <div key={i} className="card-rock p-7 flex flex-col gap-5 hover:border-rock-gold/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-center justify-between">

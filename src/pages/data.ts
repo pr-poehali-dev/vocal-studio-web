@@ -21,9 +21,8 @@ export const BOOK = {
   ],
   cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b967a556-ee5a-4b3a-a51c-8563f0ed9e12.png",
   formats: [
-    { type: "Электронная", icon: "📱", price: "500 ₽", desc: "PDF + EPUB, читай сразу после оплаты" },
-    { type: "Аудиокнига", icon: "🎧", price: "1 000 ₽", desc: "MP3, слушай в любом месте и в любое время" },
-    { type: "Бумажная", icon: "📖", price: "1 500 ₽", desc: "С доставкой по России" },
+    { type: "PDF", icon: "📄", price: "500 ₽", desc: "Читай сразу после оплаты на любом устройстве" },
+    { type: "EPUB", icon: "📱", price: "500 ₽", desc: "Удобный формат для читалок — iPhone, Kindle, Android" },
   ],
 };
 
