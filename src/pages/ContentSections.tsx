@@ -323,6 +323,15 @@ export default function ContentSections({ formData, setFormData, formSent, handl
             </p>
           </div>
 
+          <div className="w-full mb-10">
+            <img
+              src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/dd451921-14ef-42ee-905c-d8e45f2bd72a.png"
+              alt="Голос и здоровье — как заболевания организма влияют на голос"
+              className="w-full rounded-xl border border-white/10 object-contain"
+              style={{ maxHeight: "800px" }}
+            />
+          </div>
+
           <div className="relative w-full">
             <div className="rounded-xl overflow-hidden border border-white/10 glow-red" style={{ height: "700px" }}>
               <iframe
