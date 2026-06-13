@@ -33,7 +33,11 @@ export const DIRECTIONS = [
   { icon: "🎤", title: "Эстрадный вокал", desc: "Современная эстрада, поп, джаз. Работа с образом и подачей." },
   { icon: "🔬", title: "Фонопедия", desc: "Восстановление и развитие голоса. Медицинский подход к вокалу." },
   { icon: "🧠", title: "Музыкальная психотерапия", desc: "Исцеление через звук. Авторские методики снятия блоков." },
-  { icon: "✍️", title: "Сонграйтинг", desc: "Написание песен. От мелодии к тексту, от идеи к треку." },
+  { icon: "✍️", title: "Сонграйтинг", desc: "Написание песен. От мелодии к тексту, от идеи к треку.", images: [
+    "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b4268bd7-cfa2-453d-a4b9-b447ea727546.png",
+    "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/46d36d02-8dc5-429d-9a15-e1f167623613.png",
+    "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/c1bef04b-1ce5-4c8d-993b-e6305c9a183f.png",
+  ] },
 ];
 
 export const COURSES = [

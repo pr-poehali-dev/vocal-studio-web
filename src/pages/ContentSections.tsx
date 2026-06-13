@@ -99,8 +99,28 @@ function GallerySection() {
   );
 }
 
+type Direction = { icon: string; title: string; desc: string; image?: string; images?: string[] };
+
 function DirectionsSection() {
-  const [modalImage, setModalImage] = useState<{ src: string; title: string } | null>(null);
+  const [modal, setModal] = useState<{ images: string[]; title: string; index: number } | null>(null);
+
+  function openModal(dir: Direction) {
+    const imgs = dir.images ?? (dir.image ? [dir.image] : null);
+    if (imgs) setModal({ images: imgs, title: dir.title, index: 0 });
+  }
+
+  function prev(e: React.MouseEvent) {
+    e.stopPropagation();
+    setModal((m) => m && { ...m, index: (m.index - 1 + m.images.length) % m.images.length });
+  }
+
+  function next(e: React.MouseEvent) {
+    e.stopPropagation();
+    setModal((m) => m && { ...m, index: (m.index + 1) % m.images.length });
+  }
+
+  const hasContent = (dir: Direction) => !!(dir.image || dir.images?.length);
+
   return (
     <section id="directions" className="py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -112,8 +132,8 @@ function DirectionsSection() {
           {DIRECTIONS.map((dir, i) => (
             <div
               key={i}
-              className={`card-rock group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden ${dir.image ? "cursor-pointer" : "cursor-default"}`}
-              onClick={() => dir.image && setModalImage({ src: dir.image, title: dir.title })}
+              className={`card-rock group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden ${hasContent(dir) ? "cursor-pointer" : "cursor-default"}`}
+              onClick={() => hasContent(dir) && openModal(dir)}
             >
               <div className="p-7">
                 <div className="text-4xl mb-4">{dir.icon}</div>
@@ -122,7 +142,7 @@ function DirectionsSection() {
                 </h3>
                 <p className="font-cormorant text-rock-light text-lg leading-relaxed" style={{ opacity: 0.8 }}>{dir.desc}</p>
                 <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
-                {dir.image && (
+                {hasContent(dir) && (
                   <p className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-4 opacity-50">
                     Подробнее ↓
                   </p>
@@ -133,24 +153,51 @@ function DirectionsSection() {
         </div>
       </div>
 
-      {modalImage && (
+      {modal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ backgroundColor: "rgba(0,0,0,0.95)" }}
-          onClick={() => setModalImage(null)}
+          onClick={() => setModal(null)}
         >
           <button
-            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors"
-            onClick={() => setModalImage(null)}
+            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors z-10"
+            onClick={() => setModal(null)}
           >
             <Icon name="X" size={32} />
           </button>
+
           <img
-            src={modalImage.src}
-            alt={modalImage.title}
+            src={modal.images[modal.index]}
+            alt={modal.title}
             className="max-w-full max-h-[90vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
+
+          {modal.images.length > 1 && (
+            <>
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors bg-black/40 rounded-full p-2"
+                onClick={prev}
+              >
+                <Icon name="ChevronLeft" size={32} />
+              </button>
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors bg-black/40 rounded-full p-2"
+                onClick={next}
+              >
+                <Icon name="ChevronRight" size={32} />
+              </button>
+              <div className="absolute bottom-6 flex gap-2">
+                {modal.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    className={`w-2 h-2 rounded-full transition-all ${idx === modal.index ? "bg-rock-gold" : "bg-white/30"}`}
+                    onClick={(e) => { e.stopPropagation(); setModal((m) => m && { ...m, index: idx }); }}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       )}
     </section>
