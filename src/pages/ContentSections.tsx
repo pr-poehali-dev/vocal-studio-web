@@ -116,14 +116,26 @@ export default function ContentSections({ formData, setFormData, formSent, handl
             {DIRECTIONS.map((dir, i) => (
               <div
                 key={i}
-                className="card-rock p-7 group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 cursor-default"
+                className="card-rock group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 cursor-default overflow-hidden"
               >
-                <div className="text-4xl mb-4">{dir.icon}</div>
-                <h3 className="font-oswald text-lg tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors">
-                  {dir.title}
-                </h3>
-                <p className="font-cormorant text-rock-light text-lg leading-relaxed" style={{ opacity: 0.8 }}>{dir.desc}</p>
-                <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
+                {dir.image && (
+                  <div className="w-full overflow-hidden">
+                    <img
+                      src={dir.image}
+                      alt={dir.title}
+                      className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ maxHeight: 320 }}
+                    />
+                  </div>
+                )}
+                <div className="p-7">
+                  <div className="text-4xl mb-4">{dir.icon}</div>
+                  <h3 className="font-oswald text-lg tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors">
+                    {dir.title}
+                  </h3>
+                  <p className="font-cormorant text-rock-light text-lg leading-relaxed" style={{ opacity: 0.8 }}>{dir.desc}</p>
+                  <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
+                </div>
               </div>
             ))}
           </div>
