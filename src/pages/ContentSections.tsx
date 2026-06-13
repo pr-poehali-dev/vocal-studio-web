@@ -100,7 +100,7 @@ function GallerySection() {
 }
 
 function DirectionsSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [modalImage, setModalImage] = useState<{ src: string; title: string } | null>(null);
   return (
     <section id="directions" className="py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -113,13 +113,8 @@ function DirectionsSection() {
             <div
               key={i}
               className={`card-rock group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden ${dir.image ? "cursor-pointer" : "cursor-default"}`}
-              onClick={() => dir.image && setOpenIndex(openIndex === i ? null : i)}
+              onClick={() => dir.image && setModalImage({ src: dir.image, title: dir.title })}
             >
-              {dir.image && openIndex === i && (
-                <div className="w-full overflow-hidden">
-                  <img src={dir.image} alt={dir.title} className="w-full object-cover" style={{ maxHeight: 360 }} />
-                </div>
-              )}
               <div className="p-7">
                 <div className="text-4xl mb-4">{dir.icon}</div>
                 <h3 className="font-oswald text-lg tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors">
@@ -129,7 +124,7 @@ function DirectionsSection() {
                 <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
                 {dir.image && (
                   <p className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-4 opacity-50">
-                    {openIndex === i ? "Скрыть ↑" : "Подробнее ↓"}
+                    Подробнее ↓
                   </p>
                 )}
               </div>
@@ -137,6 +132,27 @@ function DirectionsSection() {
           ))}
         </div>
       </div>
+
+      {modalImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.95)" }}
+          onClick={() => setModalImage(null)}
+        >
+          <button
+            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors"
+            onClick={() => setModalImage(null)}
+          >
+            <Icon name="X" size={32} />
+          </button>
+          <img
+            src={modalImage.src}
+            alt={modalImage.title}
+            className="max-w-full max-h-[90vh] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 }
