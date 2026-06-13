@@ -32,7 +32,10 @@ export const DIRECTIONS = [
   { icon: "🎵", title: "Горловое пение", desc: "Тувинские, монгольские, алтайские и тибетские традиции. Уникальные обертоновые техники." },
   { icon: "🎤", title: "Эстрадный вокал", desc: "Современная эстрада, поп, джаз. Работа с образом и подачей." },
   { icon: "🔬", title: "Фонопедия", desc: "Восстановление и развитие голоса. Медицинский подход к вокалу.", image: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/32ffd57b-11cc-436d-b5a5-bfc225179cb8.png" },
-  { icon: "🧠", title: "Музыкальная психотерапия", desc: "Исцеление через звук. Авторские методики снятия блоков." },
+  { icon: "🧠", title: "Музыкальная психотерапия", desc: "Исцеление через звук. Авторские методики снятия блоков.", images: [
+    "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/de0644bd-4748-4d63-a3ec-9e2572fd46ae.png",
+    "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/0d344bec-c8c0-4e24-911f-5920aeabf4e1.png",
+  ] },
   { icon: "✍️", title: "Сонграйтинг", desc: "Написание песен. От мелодии к тексту, от идеи к треку.", images: [
     "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b4268bd7-cfa2-453d-a4b9-b447ea727546.png",
     "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/46d36d02-8dc5-429d-9a15-e1f167623613.png",
