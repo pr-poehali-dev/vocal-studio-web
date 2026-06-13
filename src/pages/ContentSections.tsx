@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { DIRECTIONS, COURSES, GALLERY, ARTICLES } from "./data";
+import HearingTestSection from "@/components/HearingTestSection";
 import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 function WaveDivider() {
@@ -216,6 +217,10 @@ export default function ContentSections({ formData, setFormData, formSent, handl
           </div>
         </div>
       </section>
+
+      <WaveDivider />
+
+      <HearingTestSection />
 
       <WaveDivider />
 
