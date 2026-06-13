@@ -99,48 +99,54 @@ function GallerySection() {
   );
 }
 
+function DirectionsSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  return (
+    <section id="directions" className="py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <p className="section-eyebrow mb-4">Чему я учу</p>
+          <h2 className="section-title">Чему <em>научу</em></h2>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {DIRECTIONS.map((dir, i) => (
+            <div
+              key={i}
+              className={`card-rock group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden ${dir.image ? "cursor-pointer" : "cursor-default"}`}
+              onClick={() => dir.image && setOpenIndex(openIndex === i ? null : i)}
+            >
+              {dir.image && openIndex === i && (
+                <div className="w-full overflow-hidden">
+                  <img src={dir.image} alt={dir.title} className="w-full object-cover" style={{ maxHeight: 360 }} />
+                </div>
+              )}
+              <div className="p-7">
+                <div className="text-4xl mb-4">{dir.icon}</div>
+                <h3 className="font-oswald text-lg tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors">
+                  {dir.title}
+                </h3>
+                <p className="font-cormorant text-rock-light text-lg leading-relaxed" style={{ opacity: 0.8 }}>{dir.desc}</p>
+                <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
+                {dir.image && (
+                  <p className="font-oswald text-[10px] tracking-widest uppercase text-rock-ash mt-4 opacity-50">
+                    {openIndex === i ? "Скрыть ↑" : "Подробнее ↓"}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function ContentSections({ formData, setFormData, formSent, handleSubmit }: ContentSectionsProps) {
   return (
     <>
       <WaveDivider />
 
-      {/* DIRECTIONS */}
-      <section id="directions" className="py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="section-eyebrow mb-4">Чему я учу</p>
-            <h2 className="section-title">Чему <em>научу</em></h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {DIRECTIONS.map((dir, i) => (
-              <div
-                key={i}
-                className="card-rock group hover:border-rock-red/30 transition-all duration-300 hover:-translate-y-1 cursor-default overflow-hidden"
-              >
-                {dir.image && (
-                  <div className="w-full overflow-hidden">
-                    <img
-                      src={dir.image}
-                      alt={dir.title}
-                      className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      style={{ maxHeight: 320 }}
-                    />
-                  </div>
-                )}
-                <div className="p-7">
-                  <div className="text-4xl mb-4">{dir.icon}</div>
-                  <h3 className="font-oswald text-lg tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors">
-                    {dir.title}
-                  </h3>
-                  <p className="font-cormorant text-rock-light text-lg leading-relaxed" style={{ opacity: 0.8 }}>{dir.desc}</p>
-                  <div className="w-8 h-px bg-rock-red/50 mt-5 group-hover:w-16 transition-all duration-300" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <DirectionsSection />
 
       <WaveDivider />
 
