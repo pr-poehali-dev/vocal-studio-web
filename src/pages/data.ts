@@ -71,7 +71,7 @@ export const COURSES = [
     duration: "Навсегда",
     price: "700 ₽",
     tag: "Мини-курс",
-    link: "",
+    link: "/course/karaoke-base",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/d7ff4c41-f89b-4ad0-af27-bb95a2fd677f.png",
     taglines: [
       "Для тех, кто не готов заниматься с педагогом, но хочет понимать, что происходит с его голосом.",

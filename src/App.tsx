@@ -9,6 +9,7 @@ import CoursePage from "./pages/CoursePage";
 import CourseDownloadPage from "./pages/CourseDownloadPage";
 import BookPage from "./pages/BookPage";
 import BearCoursePage from "./pages/BearCoursePage";
+import KaraokeCoursePage from "./pages/KaraokeCoursePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/course/phonic-resonance/download" element={<CourseDownloadPage />} />
           <Route path="/book" element={<BookPage />} />
           <Route path="/course/bear-ear" element={<BearCoursePage />} />
+          <Route path="/course/karaoke-base" element={<KaraokeCoursePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
