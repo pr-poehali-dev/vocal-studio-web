@@ -5,7 +5,7 @@ import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 const TELEGRAM_USERNAME = "ARTMANANDCO";
 const COURSE_PRICE = "500 ₽";
-const COVER = "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/93a81fb6-b1ea-4297-b095-339cef5db382.jpg";
+const COVER = "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/48d613fd-8eb1-4cdb-add5-64e4fb9da82c.png";
 
 const MODULES = [
   { icon: "🧠", text: "Нейробиология харизмы и социального восприятия" },
