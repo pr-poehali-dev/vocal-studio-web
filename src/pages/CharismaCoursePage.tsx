@@ -7,44 +7,18 @@ const TELEGRAM_USERNAME = "ARTMANANDCO";
 const COURSE_PRICE = "500 ₽";
 const COVER = "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/93a81fb6-b1ea-4297-b095-339cef5db382.jpg";
 
-const FOR_WHOM = [
-  "Для тех, кто хочет быть заметным — без наигранности и масок.",
-  "Для тех, кто устал «держаться в рамках» и хочет наконец звучать по-настоящему.",
-  "Если вам говорили, что вы «слишком» — слишком громкий, резкий, яркий.",
-  "Для тех, кто хочет перестать извиняться за своё присутствие.",
-  "Харизма — это не про шоу. Это про то, чтобы не бояться быть собой.",
-];
-
 const MODULES = [
-  {
-    num: "01",
-    icon: "⚡",
-    title: "Что такое харизма на самом деле",
-    desc: "Разбираем мифы: харизма — не про громкость и не про экстравертность. Это про контакт с собой и умение транслировать это вовне.",
-  },
-  {
-    num: "02",
-    icon: "🎭",
-    title: "Голос как инструмент присутствия",
-    desc: "Как звучание тела влияет на то, как тебя воспринимают. Тембр, темп, пауза — три рычага, которые меняют всё.",
-  },
-  {
-    num: "03",
-    icon: "🔥",
-    title: "Разрешение бесить",
-    desc: "Практики снятия блоков «я слишком» и «мне нельзя». Учимся занимать пространство без извинений и без агрессии.",
-  },
-];
-
-const RESULTS = [
-  "Перестать гасить себя в присутствии других",
-  "Звучать уверенно — в разговоре, в споре, на сцене",
-  "Понять, в чём твоя уникальная харизма",
-  "Научиться включать её осознанно",
+  { icon: "🧠", text: "Нейробиология харизмы и социального восприятия" },
+  { icon: "🎙️", text: "Голос как инструмент влияния" },
+  { icon: "🤝", text: "Невербальная коммуникация" },
+  { icon: "👁️", text: "Управление вниманием аудитории" },
+  { icon: "👑", text: "Присутствие, статус и доверие" },
+  { icon: "⚡", text: "Поведение в конфликтных и стрессовых ситуациях" },
+  { icon: "📋", text: "Практические протоколы для повседневного общения и публичных выступлений" },
 ];
 
 function openTelegram() {
-  const text = encodeURIComponent("Здравствуйте! Хочу купить мини-курс «Разрешаю тебе бесить». Подскажите, как оплатить?");
+  const text = encodeURIComponent("Здравствуйте! Хочу купить курс «Харизма 2.0». Подскажите, как оплатить?");
   window.open(`https://t.me/${TELEGRAM_USERNAME}?text=${text}`, "_blank");
 }
 
@@ -65,34 +39,56 @@ export default function CharismaCoursePage() {
         </Link>
       </header>
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 text-center overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,200,0,0.1) 0%, transparent 70%)"
-        }} />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <p className="section-eyebrow mb-5">Мини-курс · Анна Артман</p>
+      {/* Hero — полноэкранный с картинкой */}
+      <section className="relative min-h-screen flex flex-col md:flex-row overflow-hidden">
+        {/* Картинка */}
+        <div className="relative md:w-1/2 flex-shrink-0">
+          <img
+            src={COVER}
+            alt="Харизма 2.0"
+            className="w-full h-[60vh] md:h-screen object-cover object-top"
+          />
+          <div className="absolute inset-0"
+            style={{ background: "linear-gradient(to right, transparent 60%, #0a0a0a 100%), linear-gradient(to top, #0a0a0a 0%, transparent 30%)" }} />
+        </div>
 
-          <div className="flex justify-center mb-8">
-            <img
-              src={COVER}
-              alt="Разрешаю тебе бесить"
-              className="w-full max-w-sm rounded-xl"
-              style={{ filter: "drop-shadow(0 8px 40px rgba(201,162,39,0.4))" }}
-            />
-          </div>
+        {/* Текст */}
+        <div className="relative md:w-1/2 flex flex-col justify-center px-8 md:px-14 py-16 md:py-32 z-10">
+          <div className="absolute inset-0 pointer-events-none hidden md:block"
+            style={{ background: "radial-gradient(ellipse 80% 60% at 30% 50%, rgba(255,200,0,0.07) 0%, transparent 70%)" }} />
 
-          <div className="max-w-lg mx-auto mb-10 space-y-3 text-left">
-            {FOR_WHOM.map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <span className="text-rock-gold font-oswald text-sm flex-shrink-0 mt-1">0{i + 1}</span>
-                <span className="font-cormorant text-rock-light text-xl leading-snug">{item}</span>
-              </div>
-            ))}
-          </div>
+          <p className="section-eyebrow mb-5 relative z-10">Авторский курс · Анна Артман</p>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["Харизма", "Голос", "Присутствие", "Свобода"].map((tag) => (
+          <h1 className="leading-none mb-2 uppercase relative z-10"
+            style={{
+              fontSize: "clamp(3rem, 7vw, 5.5rem)",
+              fontFamily: "'Arial Black', Arial, sans-serif",
+              fontWeight: 900,
+              color: "#ffffff",
+              textShadow: "0 0 40px rgba(201,162,39,0.5)",
+            }}>
+            Харизма
+          </h1>
+          <h1 className="leading-none mb-8 uppercase relative z-10"
+            style={{
+              fontSize: "clamp(3rem, 7vw, 5.5rem)",
+              fontFamily: "'Arial Black', Arial, sans-serif",
+              fontWeight: 900,
+              color: "#c9a227",
+              textShadow: "0 0 40px rgba(201,162,39,0.6)",
+            }}>
+            2.0
+          </h1>
+
+          <p className="font-cormorant text-rock-light text-xl leading-relaxed mb-6 relative z-10" style={{ opacity: 0.9 }}>
+            По развитию личного влияния и коммуникативного присутствия.
+          </p>
+          <p className="font-cormorant text-rock-ash text-lg leading-relaxed mb-10 relative z-10">
+            Курс посвящён механизмам, благодаря которым человек воспринимается как убедительный, уверенный и заслуживающий доверия.
+          </p>
+
+          <div className="flex flex-wrap gap-3 mb-10 relative z-10">
+            {["Нейронауки", "Голос", "Невербалика", "Влияние"].map((tag) => (
               <span key={tag} className="font-oswald text-xs tracking-widest uppercase px-4 py-2"
                 style={{ border: "1px solid rgba(201,162,39,0.4)", color: "rgba(255,210,80,0.9)", background: "rgba(201,162,39,0.08)" }}>
                 {tag}
@@ -100,21 +96,21 @@ export default function CharismaCoursePage() {
             ))}
           </div>
 
-          <div className="inline-flex items-center gap-3 mb-10 px-6 py-3 rounded-full"
+          <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full self-start relative z-10"
             style={{ border: "1px solid rgba(201,162,39,0.3)", background: "rgba(201,162,39,0.08)" }}>
             <span className="font-oswald text-rock-gold text-2xl tracking-wide">{COURSE_PRICE}</span>
             <span className="text-rock-ash font-cormorant text-lg">— полный доступ навсегда</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="relative z-10">
             <button onClick={openTelegram} className="btn-gold flex items-center gap-3 justify-center text-lg px-10 py-4">
               <Icon name="Send" size={20} />
               Купить в Telegram
             </button>
+            <p className="mt-4 text-rock-ash font-cormorant text-base" style={{ opacity: 0.6 }}>
+              Напишите нам — получите инструкцию по оплате
+            </p>
           </div>
-          <p className="mt-4 text-rock-ash font-cormorant text-base" style={{ opacity: 0.6 }}>
-            Напишите нам — получите инструкцию по оплате и доступ к материалам
-          </p>
         </div>
       </section>
 
@@ -124,22 +120,16 @@ export default function CharismaCoursePage() {
 
       {/* Программа */}
       <section className="py-20 px-6" style={{ backgroundColor: "rgba(0,0,0,0.25)" }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center mb-14">
             <p className="section-eyebrow mb-4">Программа</p>
-            <h2 className="section-title">3 шага к <em>своей харизме</em></h2>
+            <h2 className="section-title">В <em>программе</em></h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="space-y-4">
             {MODULES.map((mod, i) => (
-              <div key={i} className="card-rock p-7 group hover:border-rock-gold/20 transition-all duration-300">
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="font-oswald text-4xl text-rock-gold/20 leading-none tracking-tighter">{mod.num}</span>
-                  <span className="text-3xl">{mod.icon}</span>
-                </div>
-                <h3 className="font-oswald text-base tracking-wide text-rock-light mb-3 group-hover:text-rock-gold transition-colors uppercase">
-                  {mod.title}
-                </h3>
-                <p className="font-cormorant text-rock-ash text-base leading-relaxed">{mod.desc}</p>
+              <div key={i} className="card-rock p-5 flex items-center gap-5">
+                <span className="text-2xl flex-shrink-0">{mod.icon}</span>
+                <span className="font-cormorant text-rock-light text-xl leading-relaxed">{mod.text}</span>
               </div>
             ))}
           </div>
@@ -150,20 +140,19 @@ export default function CharismaCoursePage() {
         <AnimatedWaveCanvas height={40} />
       </div>
 
-      {/* Результаты */}
+      {/* Основа курса */}
       <section className="py-20 px-6">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="section-eyebrow mb-4">Результат</p>
-            <h2 className="section-title">После курса вы <em>сможете</em></h2>
-          </div>
-          <div className="space-y-3">
-            {RESULTS.map((r, i) => (
-              <div key={i} className="card-rock p-5 flex items-center gap-4">
-                <Icon name="Check" size={18} className="text-rock-gold flex-shrink-0" />
-                <span className="font-cormorant text-rock-light text-xl leading-snug">{r}</span>
-              </div>
-            ))}
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="section-eyebrow mb-4">Методология</p>
+          <h2 className="section-title mb-8">Научная <em>база</em></h2>
+          <p className="font-cormorant text-rock-light text-2xl leading-relaxed mb-6" style={{ opacity: 0.9 }}>
+            Курс основан на данных психологии общения, нейронаук, исследованиях невербального поведения и многолетней практике работы с голосом и коммуникацией.
+          </p>
+          <div className="card-rock p-8 mt-10">
+            <p className="font-oswald text-rock-gold text-xl tracking-wide uppercase mb-3">Ключевой тезис</p>
+            <p className="font-cormorant text-rock-light text-2xl leading-relaxed" style={{ fontStyle: "italic" }}>
+              Харизма рассматривается не как врождённое качество, а как совокупность навыков, поддающихся развитию и тренировке.
+            </p>
           </div>
         </div>
       </section>
@@ -174,10 +163,10 @@ export default function CharismaCoursePage() {
           style={{ background: "radial-gradient(ellipse 60% 80% at 50% 100%, rgba(201,162,39,0.08) 0%, transparent 70%)" }} />
         <div className="max-w-xl mx-auto relative z-10">
           <p className="section-eyebrow mb-4">Старт</p>
-          <h2 className="section-title mb-4">Харизма — это не <em>пуиупу</em></h2>
+          <h2 className="section-title mb-4">Харизма — это <em>навык</em></h2>
           <p className="font-cormorant text-rock-ash text-xl leading-relaxed mb-10">
-            Это разрешение себе быть тем, кто ты есть.<br />
-            Без извинений. Без масок. Без «я слишком».
+            Его можно изучить. Его можно натренировать.<br />
+            Начни прямо сейчас.
           </p>
           <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full"
             style={{ border: "1px solid rgba(201,162,39,0.3)", background: "rgba(201,162,39,0.08)" }}>
