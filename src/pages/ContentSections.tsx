@@ -204,25 +204,81 @@ function DirectionsSection() {
   );
 }
 
-export default function ContentSections({ formData, setFormData, formSent, handleSubmit }: ContentSectionsProps) {
+type Course = typeof COURSES[number] & { taglines?: string[] };
+
+function CourseModal({ course, onClose }: { course: Course; onClose: () => void }) {
+  const taglines = (course as { taglines?: string[] }).taglines ?? [];
   return (
-    <>
-      <WaveDivider />
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ backgroundColor: "rgba(0,0,0,0.92)" }}
+      onClick={onClose}
+    >
+      <div
+        className="relative card-rock max-w-lg w-full p-8 flex flex-col gap-6"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          className="absolute top-4 right-4 text-rock-ash hover:text-white transition-colors"
+          onClick={onClose}
+        >
+          <Icon name="X" size={22} />
+        </button>
 
-      <DirectionsSection />
-
-      <WaveDivider />
-
-      {/* COURSES */}
-      <section id="courses" className="py-28" style={{ backgroundColor: "#111111" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16">
-            <p className="section-eyebrow mb-4">Программы</p>
-            <h2 className="section-title">Прокачка <em>голоса</em> (мастер-классы и лекции)</h2>
+        <div className="flex gap-5 items-start">
+          {course.cover && (
+            <img
+              src={course.cover}
+              alt={course.title}
+              className="w-24 flex-shrink-0 object-cover"
+              style={{ filter: "drop-shadow(0 4px 16px rgba(201,162,39,0.3))" }}
+            />
+          )}
+          <div>
+            <p className="font-oswald text-[10px] tracking-[0.25em] uppercase text-rock-ash mb-1">{course.level}</p>
+            <h3 className="font-cormorant text-2xl font-semibold text-rock-light leading-snug">{course.title}</h3>
+            <p className="font-cormorant text-rock-gold text-xl mt-1">{course.price}</p>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {COURSES.map((course, i) => (
+        {taglines.length > 0 && (
+          <ul className="space-y-3 border-t border-white/10 pt-5">
+            {taglines.map((line, idx) => (
+              <li key={idx} className="font-cormorant text-rock-light text-lg leading-snug flex gap-3">
+                <span className="text-rock-red flex-shrink-0 mt-0.5">—</span>
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <a
+          href="#consultation"
+          className="btn-gold w-full text-center block"
+          onClick={onClose}
+        >
+          Записаться
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function CoursesSection() {
+  const [modal, setModal] = useState<Course | null>(null);
+
+  return (
+    <section id="courses" className="py-28" style={{ backgroundColor: "#111111" }}>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16">
+          <p className="section-eyebrow mb-4">Программы</p>
+          <h2 className="section-title">Прокачка <em>голоса</em> (мастер-классы и лекции)</h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {COURSES.map((course, i) => {
+            const hasTaglines = "taglines" in course && Array.isArray((course as { taglines?: string[] }).taglines);
+            return (
               <div key={i} className="relative card-rock p-8 hover:border-rock-gold/20 transition-all duration-300 group flex gap-5">
                 {course.cover && (
                   <div className="flex-shrink-0 w-24">
@@ -236,39 +292,50 @@ export default function ContentSections({ formData, setFormData, formSent, handl
                       {course.tag}
                     </span>
                   </div>
-                  <h3 className="font-cormorant text-2xl font-semibold text-rock-light mb-3">
-                    {course.title}
-                  </h3>
+                  <h3 className="font-cormorant text-2xl font-semibold text-rock-light mb-3">{course.title}</h3>
                   <p className="font-cormorant text-rock-light text-lg leading-relaxed mb-6" style={{ opacity: 0.85 }}>{course.desc}</p>
                   <div className="flex items-center justify-between pt-5 border-t border-white/5 mt-auto">
                     <div className="font-oswald text-xs tracking-widest uppercase text-rock-ash">{course.duration}</div>
                     <div className="font-cormorant text-xl text-gradient-gold">{course.price}</div>
                   </div>
                   {course.link ? (
-                    <Link to={course.link.startsWith("/") ? course.link : course.link} className={`${course.link.startsWith("/") ? "btn-gold" : "btn-rock"} w-full text-center mt-5 block no-underline`}>
+                    <Link to={course.link} className="btn-gold w-full text-center mt-5 block no-underline">
                       Подробнее
                     </Link>
+                  ) : hasTaglines ? (
+                    <button
+                      className="btn-rock w-full text-center mt-5"
+                      onClick={() => setModal(course as Course)}
+                    >
+                      Узнать подробнее
+                    </button>
                   ) : (
                     <a href="#consultation" className="btn-rock w-full text-center mt-5 block">
                       Узнать подробнее
                     </a>
                   )}
-                  {"taglines" in course && Array.isArray((course as { taglines?: string[] }).taglines) && (
-                    <ul className="mt-4 space-y-2">
-                      {((course as { taglines: string[] }).taglines).map((line, idx) => (
-                        <li key={idx} className="font-cormorant text-rock-ash text-sm leading-snug flex gap-2">
-                          <span className="text-rock-red mt-0.5 flex-shrink-0">—</span>
-                          <span>{line}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
+
+      {modal && <CourseModal course={modal} onClose={() => setModal(null)} />}
+    </section>
+  );
+}
+
+export default function ContentSections({ formData, setFormData, formSent, handleSubmit }: ContentSectionsProps) {
+  return (
+    <>
+      <WaveDivider />
+
+      <DirectionsSection />
+
+      <WaveDivider />
+
+      <CoursesSection />
 
       <WaveDivider />
 
