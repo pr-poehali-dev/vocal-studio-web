@@ -86,7 +86,7 @@ export const COURSES = [
     title: "Сила твоего голоса",
     desc: "Как голос помогает лечить тело, снимать напряжение и восстанавливать энергию. Наука, практика и личный опыт в одном издании.",
     duration: "PDF / Аудио / Бумага",
-    price: "от 500 ₽",
+    price: "500 ₽",
     tag: "Книга",
     link: "/book",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b967a556-ee5a-4b3a-a51c-8563f0ed9e12.png",
