@@ -7,11 +7,11 @@ const TELEGRAM_USERNAME = "ARTMANANDCO";
 const COURSE_PRICE = "700 ₽";
 
 const FOR_WHOM = [
-  { icon: "🎤", text: "Для тех, кто не готов заниматься с педагогом, но хочет понимать, что происходит с его голосом." },
-  { icon: "🎵", text: "Для тех, кто хочет петь в караоке уверенно, но не планирует брать регулярные уроки вокала." },
-  { icon: "📖", text: "Если вам не нужен большой вокальный курс, а нужен понятный фундамент — этот мини-курс для вас." },
-  { icon: "😤", text: "Не хотите становиться вокалистом. Хотите перестать мучиться в караоке." },
-  { icon: "🎙️", text: "Не каждый человек хочет заниматься вокалом. Но почти каждый хочет не страдать у микрофона." },
+  "Для тех, кто не готов заниматься с педагогом, но хочет понимать, что происходит с его голосом.",
+  "Для тех, кто хочет петь в караоке уверенно, но не планирует брать регулярные уроки вокала.",
+  "Если вам не нужен большой вокальный курс, а нужен понятный фундамент — этот мини-курс для вас.",
+  "Не хотите становиться вокалистом. Хотите перестать мучиться в караоке.",
+  "Не каждый человек хочет заниматься вокалом. Но почти каждый хочет не страдать у микрофона.",
 ];
 
 const MODULES = [
@@ -153,9 +153,9 @@ export default function KaraokeCoursePage() {
           </div>
           <div className="space-y-4">
             {FOR_WHOM.map((item, i) => (
-              <div key={i} className="card-rock p-5 flex items-center gap-5">
-                <span className="text-3xl flex-shrink-0">{item.icon}</span>
-                <span className="font-cormorant text-rock-light text-lg leading-relaxed">{item.text}</span>
+              <div key={i} className="card-rock p-5 flex items-center gap-4">
+                <span className="text-rock-gold font-oswald text-sm flex-shrink-0">0{i + 1}</span>
+                <span className="font-cormorant text-rock-light text-xl leading-relaxed">{item}</span>
               </div>
             ))}
           </div>
