@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 import AnimatedWaveCanvas from "@/components/AnimatedWaveCanvas";
 
 const TELEGRAM_USERNAME = "ARTMANANDCO";
-const COURSE_PRICE = "2 000 ₽";
+const COURSE_PRICE = "1 000 ₽";
 const COVER = "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/0d534d16-7a07-4977-a138-65a0a1934a91.png";
 
 const PROGRAM = [
