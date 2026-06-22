@@ -253,6 +253,16 @@ export default function ContentSections({ formData, setFormData, formSent, handl
                       Узнать подробнее
                     </a>
                   )}
+                  {"taglines" in course && Array.isArray((course as { taglines?: string[] }).taglines) && (
+                    <ul className="mt-4 space-y-2">
+                      {((course as { taglines: string[] }).taglines).map((line, idx) => (
+                        <li key={idx} className="font-cormorant text-rock-ash text-sm leading-snug flex gap-2">
+                          <span className="text-rock-red mt-0.5 flex-shrink-0">—</span>
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}
