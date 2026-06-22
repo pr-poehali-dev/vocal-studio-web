@@ -88,6 +88,15 @@ export default function KaraokeCoursePage() {
             />
           </div>
 
+          <div className="max-w-xl mx-auto mb-10 space-y-3 text-left">
+            {FOR_WHOM.map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="text-rock-gold font-oswald text-sm flex-shrink-0 mt-1">0{i + 1}</span>
+                <span className="font-cormorant text-rock-light text-xl leading-snug">{item}</span>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {["Опора", "Дыхание", "Резонанс", "Сцена"].map((tag) => (
               <span key={tag} className="font-oswald text-xs tracking-widest uppercase px-4 py-2"
