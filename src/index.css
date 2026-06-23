@@ -47,6 +47,21 @@
     font-family: "Cormorant", serif;
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  p,
+  li,
+  span,
+  h1,
+  h2,
+  h3,
+  h4 {
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
   html {
