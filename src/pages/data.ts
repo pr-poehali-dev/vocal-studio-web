@@ -86,7 +86,7 @@ export const COURSES = [
     title: "Харизма 2.0",
     desc: "Курс по развитию личного влияния и коммуникативного присутствия. Нейробиология, голос, невербалика, управление вниманием — харизма как навык, поддающийся тренировке.",
     duration: "Навсегда",
-    price: "500 ₽",
+    price: "1 400 ₽",
     tag: "Курс",
     link: "/course/charisma",
     cover: "https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/48d613fd-8eb1-4cdb-add5-64e4fb9da82c.png",
