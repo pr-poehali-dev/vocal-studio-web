@@ -47,14 +47,14 @@ export default function NavBar({ scrolled, menuOpen, setMenuOpen }: NavBarProps)
             style={{ background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.5) 50%, transparent)" }} />
         )}
 
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
           {/* Лого */}
           <a href="#" className="flex items-center select-none group">
             <img
               src="https://cdn.poehali.dev/projects/2c2649a4-f97e-4608-8ac1-4bd4de8bd9d6/bucket/b94da0ff-312b-4232-bc44-3b8de7c3505c.png"
               alt="Artman"
-              className="h-36 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
               style={{
                 filter: "invert(1) sepia(1) saturate(4) hue-rotate(5deg) brightness(1.3) drop-shadow(0 0 20px rgba(201,168,76,0.9))",
                 mixBlendMode: "screen",

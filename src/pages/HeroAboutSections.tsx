@@ -206,7 +206,7 @@ export default function HeroAboutSections() {
           <div className="absolute top-0 right-0 w-px h-full bg-rock-gold/40" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-36 pb-16">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-28 pb-16">
 
           {/* Над-заголовок */}
           <div className="flex items-center justify-center gap-4 mb-10 animate-fade-in">
